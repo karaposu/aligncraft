@@ -3,4 +3,4 @@
 
 Markdown Book: 
 
-https://karaposu.github.io/AlignCraft/
+https://karaposu.github.io/aligncraft/
