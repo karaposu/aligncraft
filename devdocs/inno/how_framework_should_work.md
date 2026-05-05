@@ -68,22 +68,22 @@ The old lifecycle's seven phases were really describing this journey as it appea
 
 ### 3. Why alignment should be decoupled
 
-The sensemaking analysis kept relating innovation to alignment — innovation as a "mode" within AlignStack, innovation creating "new explicitness" for the pillars, innovation-alignment tension, etc.
+The sensemaking analysis kept relating innovation to alignment — innovation as a "mode" within AlignCraft, innovation creating "new explicitness" for the pillars, innovation-alignment tension, etc.
 
-This coupling is useful for understanding how innovation fits into AlignStack. But it's wrong for the framework itself. Here's why:
+This coupling is useful for understanding how innovation fits into AlignCraft. But it's wrong for the framework itself. Here's why:
 
 **Innovation exists independently of alignment.** You can innovate without any alignment framework. The sample.md conversation had no alignment framework — just a person and an AI having a discussion. The innovation (convergence thesis) emerged purely from the innovation process.
 
 **Coupling to alignment limits the framework's applicability.** The innovation framework should work for:
-- Software development (with or without AlignStack)
+- Software development (with or without AlignCraft)
 - Business strategy (sample.md)
 - Product design
 - Scientific research
 - Any domain where novelty is needed
 
-If the framework talks about "alignment layers" and "four pillars," it only makes sense to AlignStack users.
+If the framework talks about "alignment layers" and "four pillars," it only makes sense to AlignCraft users.
 
-**The right relationship: innovation framework is standalone. AlignStack uses it as a mode.**
+**The right relationship: innovation framework is standalone. AlignCraft uses it as a mode.**
 
 ```
 ┌──────────────────────────────┐
@@ -93,14 +93,14 @@ If the framework talks about "alignment layers" and "four pillars," it only make
                │ used by
                ▼
 ┌──────────────────────────────┐
-│   AlignStack (Innovation     │  ← one of seven modes
+│   AlignCraft (Innovation     │  ← one of seven modes
 │   Mode activates the         │
 │   framework within the       │
 │   six layers)                │
 └──────────────────────────────┘
 ```
 
-The framework itself should contain zero references to alignment layers, four pillars, or modes. It should be pure innovation mechanics. Then AlignStack can invoke it as a tool — the same way `/sense-making` is a standalone framework that AlignStack agents use.
+The framework itself should contain zero references to alignment layers, four pillars, or modes. It should be pure innovation mechanics. Then AlignCraft can invoke it as a tool — the same way `/sense-making` is a standalone framework that AlignCraft agents use.
 
 ---
 
@@ -140,7 +140,7 @@ How to evaluate whether a novel output is actually good. Not alignment criteria 
 ## What's Deliberately Excluded
 
 - Any reference to alignment, layers, pillars, or modes
-- Any reference to AlignStack specifically
+- Any reference to AlignCraft specifically
 - Any reference to software development specifically (examples can come from any domain)
 - Any prescriptive sequence (the process is iterative, not linear)
 - "Creativity" as a concept (the framework operates on mechanisms, not traits)

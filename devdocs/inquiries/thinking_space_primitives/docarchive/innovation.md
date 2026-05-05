@@ -58,13 +58,13 @@ Under this inversion, the three-layer architecture is refined: each layer has it
 
 **5b (focused):** **NO PRIMITIVE USAGE REPORT per inquiry.** Currently, `/intuit` produces seeds with primitive_contributions fields (Phase B schema), but no aggregation exists that asks "which primitives did this inquiry use?" Without the report, we can't tell if an inquiry chronically under-uses a primitive (suggesting it's not really operating) or over-uses one (suggesting it's doing too much). Missing: per-inquiry and cross-inquiry primitive-usage aggregator.
 
-**5c (contrarian):** **NO EXPLICIT BUFFER/WORKING-MEMORY OBJECT in AlignStack's state.** Sensemaking admitted Working Memory as a primitive in the Buffer type. But where does the buffer LIVE in AlignStack's architecture? Currently: in the LLM's context window (ephemeral, per-call). There's no persistent thinking-space buffer across calls. If the buffer is truly primitive, it should have a first-class state representation — perhaps a `thinking_space.md` artifact per inquiry, updated during each discipline call, holding the current active set. This would be a significant architectural addition.
+**5c (contrarian):** **NO EXPLICIT BUFFER/WORKING-MEMORY OBJECT in AlignCraft's state.** Sensemaking admitted Working Memory as a primitive in the Buffer type. But where does the buffer LIVE in AlignCraft's architecture? Currently: in the LLM's context window (ephemeral, per-call). There's no persistent thinking-space buffer across calls. If the buffer is truly primitive, it should have a first-class state representation — perhaps a `thinking_space.md` artifact per inquiry, updated during each discipline call, holding the current active set. This would be a significant architectural addition.
 
 ### 6. Domain Transfer (Generator)
 
 **6a (generic):** Transfer from SOFTWARE ARCHITECTURE — primitives as services with APIs, SLAs, and observability requirements. Standard microservices analog.
 
-**6b (focused):** Transfer from **CHESS ENGINE STATIC EVALUATION** — primitives as evaluation FEATURES with WEIGHTS, and composability via feature-combination. A position's value is computed from a weighted sum of features (material, piece mobility, king safety, pawn structure, etc.). AlignStack analog: each primitive is a FEATURE of the current inquiry state; primitive-level signals feed a composite `/intuit` output. Makes composition mechanical rather than prompt-orchestrated.
+**6b (focused):** Transfer from **CHESS ENGINE STATIC EVALUATION** — primitives as evaluation FEATURES with WEIGHTS, and composability via feature-combination. A position's value is computed from a weighted sum of features (material, piece mobility, king safety, pawn structure, etc.). AlignCraft analog: each primitive is a FEATURE of the current inquiry state; primitive-level signals feed a composite `/intuit` output. Makes composition mechanical rather than prompt-orchestrated.
 
 Chess engines also have a key lesson: feature sets EVOLVE over time (modern engines learned features neural-net-style, replacing hand-crafted features). Suggests the Phase C+ primitive set should be data-driven, not pre-declared.
 

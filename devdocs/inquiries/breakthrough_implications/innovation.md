@@ -16,7 +16,7 @@ The alignment-SIC identity is a breakthrough (coverage completeness via 6×4=24 
 ## Mechanism Application
 
 ### 1. Lens Shifting
-**1a. Generic — Software methodology → cognitive alignment framework:** AlignStack isn't a software methodology with general theory. It's a GENERAL COGNITIVE ALIGNMENT FRAMEWORK first applied to software. Software was the first domain, not the only one.
+**1a. Generic — Software methodology → cognitive alignment framework:** AlignCraft isn't a software methodology with general theory. It's a GENERAL COGNITIVE ALIGNMENT FRAMEWORK first applied to software. Software was the first domain, not the only one.
 
 **1b. Focused — Book needs updating → theory needs EXTRACTING:** Instead of updating the book, EXTRACT the theory into a standalone, domain-free spec. Like `what_are_they.md` but for alignment theory. The book becomes one application of the theory, not the theory itself.
 
@@ -41,7 +41,7 @@ The alignment-SIC identity is a breakthrough (coverage completeness via 6×4=24 
 
 **4b. Focused — "Works without software":** The framework is COGNITIVE, not computational. Works with paper. The product has non-software expressions (workshops, thinking practices) alongside software (commands, loops).
 
-**4c. Controversial — Theory supersedes the book:** The thinking disciplines + alignment theory are the CORE product. The book becomes a historical first application. Other domains follow. AlignStack becomes a platform.
+**4c. Controversial — Theory supersedes the book:** The thinking disciplines + alignment theory are the CORE product. The book becomes a historical first application. Other domains follow. AlignCraft becomes a platform.
 
 ### 5. Absence Recognition
 **5a. Generic — Missing: INSTANTIATED 24-check matrix:**
@@ -72,7 +72,7 @@ The alignment-SIC identity is a breakthrough (coverage completeness via 6×4=24 
 ### 7. Extrapolation
 **7a. Generic — Matrix becomes research instrument:** After 100 users, patterns emerge: "L2 fails 34% of the time, primarily due to missing Comparable." Framework transitions from tool to scientific instrument.
 
-**7b. Focused — Project splits: theory platform + domain applications:** One theory, multiple domain-specific applications (software, research, strategy). Each domain = an adapter. AlignStack = platform.
+**7b. Focused — Project splits: theory platform + domain applications:** One theory, multiple domain-specific applications (software, research, strategy). Each domain = an adapter. AlignCraft = platform.
 
 **7c. Controversial — Framework discovers itself through self-application:** The identity was discovered through SIC. SIC IS alignment. The framework discovered itself. Each subsequent self-application discovers more. This IS the self-improving loop beginning.
 

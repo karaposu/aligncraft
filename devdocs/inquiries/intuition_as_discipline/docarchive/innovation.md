@@ -59,7 +59,7 @@ Write a discipline spec for `/intuit` at the quality level of /explore and /sens
 
 **6a (generic):** Transfer from RAG systems — standard background.
 
-**6b (focused):** Transfer from **chess opening books**. A chess player doesn't reason from scratch each game; they recognize positions from a learned book, with transferable plans attached to each position. AlignStack analog: inquiry states are "positions"; prior inquiries form an "opening book"; transferable methodology moves attach to each book entry. The `/intuit` discipline is the lookup-and-transfer mechanism over this book.
+**6b (focused):** Transfer from **chess opening books**. A chess player doesn't reason from scratch each game; they recognize positions from a learned book, with transferable plans attached to each position. AlignCraft analog: inquiry states are "positions"; prior inquiries form an "opening book"; transferable methodology moves attach to each book entry. The `/intuit` discipline is the lookup-and-transfer mechanism over this book.
 
 **6c (contrarian):** Transfer from **differential diagnostic medicine**. Differential diagnosis produces a RANKED LIST of hypotheses with specific DISCRIMINATORS — "if A is the cause, we'd see X; if B is the cause, we'd see Y; the test that separates them is Z." Reframes `/intuit`'s output: not flat seed list but ranked differential hypotheses with discriminators that the next discipline step uses to narrow. Substantially more actionable than flat seeds.
 
@@ -136,7 +136,7 @@ The **discriminator** field is load-bearing: it names what the caller should che
 
 Extend the schema's state field beyond POSITIVE/NEGATIVE/INSUFFICIENT_HUNCH:
 
-- `source_type`: **CORPUS_MATCH** (grounded in AlignStack corpus) / **TRAINING_DISTRIBUTION_MATCH** (LLM's training knowledge, no corpus finding) / **ADVERSARIAL_MATCH** (matches a prior FAILURE pattern, predicts repetition of failure) / **NOT_APPLICABLE** (intuition isn't the right tool for this source — pure computation, direct verification, etc.)
+- `source_type`: **CORPUS_MATCH** (grounded in AlignCraft corpus) / **TRAINING_DISTRIBUTION_MATCH** (LLM's training knowledge, no corpus finding) / **ADVERSARIAL_MATCH** (matches a prior FAILURE pattern, predicts repetition of failure) / **NOT_APPLICABLE** (intuition isn't the right tool for this source — pure computation, direct verification, etc.)
 - `hunch_state` unchanged: POSITIVE / NEGATIVE / INSUFFICIENT_HUNCH
 
 The combination lets downstream systems treat each source_type differently — CORPUS_MATCH feeds calibration directly; TRAINING_DISTRIBUTION_MATCH flagged for lower automatic trust; ADVERSARIAL_MATCH consumed as risk signal, not opportunity; NOT_APPLICABLE short-circuits to "skip intuition, run discipline normally."

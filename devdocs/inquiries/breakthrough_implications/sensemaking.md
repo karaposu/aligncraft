@@ -25,7 +25,7 @@ The identity provides a COMPLETE ENUMERATION of the alignment space: 6 layers ×
 
 ### Three Trajectory Shifts
 
-1. **Book + tools = one product.** AlignStack: theory + practice proven structurally identical. Unique market position — can't be replicated by bolting tools onto theory.
+1. **Book + tools = one product.** AlignCraft: theory + practice proven structurally identical. Unique market position — can't be replicated by bolting tools onto theory.
 
 2. **Self-improving loop has an ENUMERABLE roadmap.** Fill the 24-check matrix. Progress = matrix completion percentage. Not "iterate until it works" but "systematically fill gaps."
 

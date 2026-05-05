@@ -7,7 +7,7 @@ devdocs/inquiries/intuition_as_discipline/_branch.md
 
 ## Mode and Entry
 
-**Mode:** Possibility exploration (hybrid with artifact) — the territory is mostly conceptual (how to architect a transform-space intuition discipline), but it has concrete artifact anchors: existing AlignStack discipline specs (the reference quality bar) and well-developed AI/cognitive-science fields (Case-Based Reasoning, Structure-Mapping Engine, transform techniques from signal processing).
+**Mode:** Possibility exploration (hybrid with artifact) — the territory is mostly conceptual (how to architect a transform-space intuition discipline), but it has concrete artifact anchors: existing AlignCraft discipline specs (the reference quality bar) and well-developed AI/cognitive-science fields (Case-Based Reasoning, Structure-Mapping Engine, transform techniques from signal processing).
 
 **Entry:** Signal-first — the user supplied a strong anchor (Z-transform as architectural template), a specific architectural claim (intuition = first-class discipline, not infrastructure), and a load-bearing hypothesis (embeddings may be demotable from substrate to optional tool). Start by probing the transform pattern; scan outward.
 
@@ -20,27 +20,27 @@ Surface-level inventory of the territory's major regions.
 | Region | What lives here | First-pass note |
 |---|---|---|
 | **R1: Mathematical transform techniques (the template)** | Z-transform, Laplace, Fourier, Wavelet, Radon; pattern = forward / operate / inverse | Three-step pattern is genuinely universal across transforms; domain lift is the unifying move |
-| **R2: Existing AlignStack discipline specs** | `/explore` (7-step scan-signal-probe), `/sense-making` (SV construction), `/decompose` (7-step coupling/boundaries), `/innovate` (mechanism × seed), `/td-critique` (dimension × prosecution × defense) | Reference quality bar. Each has: explicit inputs, process model (numbered), failure modes (6–7 named), coverage/convergence criteria |
+| **R2: Existing AlignCraft discipline specs** | `/explore` (7-step scan-signal-probe), `/sense-making` (SV construction), `/decompose` (7-step coupling/boundaries), `/innovate` (mechanism × seed), `/td-critique` (dimension × prosecution × defense) | Reference quality bar. Each has: explicit inputs, process model (numbered), failure modes (6–7 named), coverage/convergence criteria |
 | **R3: Case-Based Reasoning (CBR)** | Retrieve → reuse → revise → retain; literally the user's proposed pattern with different vocabulary | Mature AI field (30+ years). Known challenges: indexing, adaptation, maintenance. Direct precedent. |
 | **R4: Structure-Mapping Engine (SME) / analogical reasoning** | Gentner's formal model: predicates + mappings + alignment + transfer | Formalized analogical reasoning; explicitly includes the inverse-transform (mapping back) step |
 | **R5: Chain-of-Thought and reasoning scaffolds** | CoT, Self-Ask, Tree-of-Thoughts, Reflexion, Least-to-Most | Operates by rephrasing / decomposing — same "transform to easier space" pattern, but implicit not explicit |
 | **R6: Embedding-alternative retrieval** | BM25 (keyword), LLM-as-retriever, MCTS-based search, keyword-extraction retrieval, long-context direct-read | Direct alternatives to embedding similarity — relevant for the "embeddings optional" claim |
-| **R7: Long-context LLMs** | Modern models: 200k–2M tokens; can fit full corpora at current AlignStack scale | Changes the cost calculus — "read everything each time" becomes feasible for small corpora |
+| **R7: Long-context LLMs** | Modern models: 200k–2M tokens; can fit full corpora at current AlignCraft scale | Changes the cost calculus — "read everything each time" becomes feasible for small corpora |
 | **R8: Schema induction / abstraction in ML** | Prompt-based abstraction, schema learning, meta-prompting | How LLMs reliably produce abstractions; known limits on consistency |
-| **R9: Discipline integration patterns in AlignStack** | How /innovate reads /sense-making, how /td-critique reads /innovate — file-based handoff via inquiry folder | Reference for how /intuit would integrate with other disciplines |
+| **R9: Discipline integration patterns in AlignCraft** | How /innovate reads /sense-making, how /td-critique reads /innovate — file-based handoff via inquiry folder | Reference for how /intuit would integrate with other disciplines |
 | **R10: The prior finding (thinking_space_dynamics)** | Three-layer architecture; P6/P7 as mechanism; Phase 1 substrate | The predecessor being potentially refined |
 | **R11: Failure modes of transform approaches** | Aliasing (multiple sources → same transform), inverse-transform mismatch, boundary effects, information loss during transform | Transform techniques have known failure modes; intuition-discipline will inherit them |
-| **R12: AlignStack corpus characteristics** | ~20 findings now, each ~5k tokens; grows linearly with inquiries; single-user system | Scale context — determines which approaches are buildable now |
+| **R12: AlignCraft corpus characteristics** | ~20 findings now, each ~5k tokens; grows linearly with inquiries; single-user system | Scale context — determines which approaches are buildable now |
 | **R13: The embedding-necessity question** | Embeddings add: deterministic retrieval, cross-query comparability, cheap repeated queries, persistent geometric space | Enumerates what's LOST if embeddings are dropped |
 | **R14: Cognitive science of intuition** | Dual-process theory, fluency heuristic, analogical transfer, expertise chunking | Empirical anchors for what the discipline must approximate |
-| **R15: Confirmed absent — a general formal theory of "intuition as discipline"** | — | No existing discipline spec for "intuit" in AlignStack or (to my knowledge) in any methodology literature |
+| **R15: Confirmed absent — a general formal theory of "intuition as discipline"** | — | No existing discipline spec for "intuit" in AlignCraft or (to my knowledge) in any methodology literature |
 
 ### Scan signals (what stands out)
 
 - **Density spike at R3 ∩ R4:** Case-Based Reasoning + Structure-Mapping Engine form a dense cluster. These are the direct intellectual precedents for what the user is proposing. The user may not know the names, but the architecture is well-explored.
 - **Novelty at R1 → R11:** mapping the transform-technique pattern TO an LLM-powered cognitive discipline is genuinely novel framing. The pattern itself is borrowed; the application is new.
 - **Tension at R6 ∩ R7 vs R13:** long-context models + LLM-as-retriever make embedding-free operation feasible at current scale; but R13's list of what embeddings add isn't nothing. The tradeoff is real, not a clean win for the user's position.
-- **Absence at R15:** no prior discipline spec exists for this. AlignStack's other disciplines have decades of meta-methodology roots (exploration ← research design; sensemaking ← Weick's org theory; critique ← epistemology; innovation ← creativity research). Intuition does NOT have a comparable meta-methodology. This is unusual — suggests the discipline needs to invent its structural spec, not just adapt one.
+- **Absence at R15:** no prior discipline spec exists for this. AlignCraft's other disciplines have decades of meta-methodology roots (exploration ← research design; sensemaking ← Weick's org theory; critique ← epistemology; innovation ← creativity research). Intuition does NOT have a comparable meta-methodology. This is unusual — suggests the discipline needs to invent its structural spec, not just adapt one.
 - **Relevance at R2:** the quality bar is explicit and measurable. The existing disciplines show what "discipline" means structurally: numbered process model, named failure modes, convergence criteria, clear I/O.
 
 ---
@@ -76,7 +76,7 @@ The user is proposing CBR with two specific architectural choices: (a) abstracti
 
 ### Probe 2 (R2) — What a discipline spec requires structurally
 
-Looking at existing specs in AlignStack (as loaded in the system-reminder at the top of this session's work):
+Looking at existing specs in AlignCraft (as loaded in the system-reminder at the top of this session's work):
 
 | Spec component | Example (from /explore) | /intuit must provide |
 |---|---|---|
@@ -271,7 +271,7 @@ Where does /intuit fit in a workflow?
 - Transform-technique pattern itself (forward/operate/inverse) is universal and borrowed cleanly
 - Prior finding's three-layer architecture (L1/L3/L2) stands; mechanism inside L3 is what's under revision
 - Popperian schema from prior finding carries forward as intuition's output format
-- Reference quality bar (existing AlignStack disciplines) is explicit and measurable
+- Reference quality bar (existing AlignCraft disciplines) is explicit and measurable
 
 **Unexplored (deliberate deferral):**
 - Formal SME predicate calculus implementation (too wide for MVP)
@@ -290,7 +290,7 @@ Where does /intuit fit in a workflow?
 | Transform-technique pattern applies to intuition | Confirmed (user's proposal + pattern universality) |
 | Case-Based Reasoning is direct precedent | Confirmed |
 | Structure-Mapping Engine formalizes the mapping step | Confirmed |
-| Existing AlignStack discipline specs set the quality bar | Confirmed |
+| Existing AlignCraft discipline specs set the quality bar | Confirmed |
 | /intuit spec has many empty slots (modes, convergence, failure modes specific to mechanism) | Confirmed |
 | Transform failure modes are inheritable | Confirmed (aliasing, information loss, boundary effects, domain mismatch, overfit, underfit) |
 | Embeddings are not strictly necessary at current corpus size | Confirmed |

@@ -6,12 +6,13 @@
 # Part I: Foundations
 
 - [Terminology](chapter_0/01_terminology.md)
+- [Slash Commands](chapter_0/02_slash_commands.md)
 - [The Evolution of Development](chapter_1/01_from_waterfall_to_agile_to_ai_assisted.md)
   - [The Birth of Vibe Coding](chapter_1/02_the_birth_of_vibe_coding.md)
   - [Why Traditional Methods Fall Short with AI](chapter_1/03_why_traditional_methods_fall_short_with_ai.md)
   - [Emergence of New Design Patterns](chapter_1/04_emergence_of_new_design_patterns.md)
   - [The Documentation Inversion](chapter_1/05_documentation_inversion.md)
-- [The AlignStack Framework](chapter_2/01_alignment.md)
+- [The AlignCraft Framework](chapter_2/01_alignment.md)
   - [Alignment Artifacts](chapter_2/02_alignment_artifacts.md)
 
 # Part II: Understanding AI Collaboration
@@ -27,7 +28,7 @@
   - [Understanding Ground Rules](chapter_4/06_understanding_ground_rules.md)
 - [The Data Dump](chapter_5_data_dump/the_data_dump.md)
 
-# Part III: AlignStack Patterns
+# Part III: AlignCraft Patterns
 
 - [DevDocs Pattern](chapter_6_devdocs/01_devdocs_pattern.md)
   - [Foundation Docs](chapter_6_devdocs/02_foundation_docs.md)
@@ -48,12 +49,12 @@
 
 - [Appendix 1: New Project Prompts](APPENDIX1_New_Project_Prompts.md)
 - [Appendix 2: From Existing Codebase Prompts](APPENDIX2_From_Existing_Codebase_Prompts.md)
-- [Appendix 3: Refactoring with AlignStack](APPENDIX3_Refactoring.md)
+- [Appendix 3: Refactoring with AlignCraft](APPENDIX3_Refactoring.md)
 - [Appendix 4: Adding New Features](APPENDIX4_Adding_New_Feature.md)
 - [Appendix 5: Useful Prompts](APPENDIX5_Useful.md)
 - [Appendix 6: Sense Making](APPENDIX6_Sense_Making.md)
 - [Appendix 7: Dynamic Prompts](APPENDIX7_Dynamic_Prompts.md)
-- [Appendix 8: AlignStack Slash Commands](APPENDIX8_Alignstack_Slash_Commands.md)
+- [Appendix 8: AlignCraft Slash Commands](APPENDIX8_AlignCraft_Slash_Commands.md)
 - [Appendix 9: DevDocs Folder Convention](APPENDIX9_Devdocs_Folder_Convention.md)
 
 ---

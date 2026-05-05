@@ -276,7 +276,7 @@ Validation:
 |---|---|---|
 | **Independence** | PASS | Each piece has clear, minimal dependencies; P4/P5/P6 parallelizable |
 | **Completeness** | PASS | All three layers (substrate + primitives + hunch), integration, calibration, prior-finding housekeeping, validation covered |
-| **Reassembly** | PASS | Pieces + interfaces → three-layer architecture operating over AlignStack's existing disciplines, matching SV6 |
+| **Reassembly** | PASS | Pieces + interfaces → three-layer architecture operating over AlignCraft's existing disciplines, matching SV6 |
 | **Tractability** | PASS | Each piece small-to-medium; P6 and P7 are the largest (keystones) but still single-focused-pass-sized |
 | **Interface clarity** | PASS | All 13 interfaces named; external API dependencies flagged explicitly |
 | **Balance** | PASS | No 80% piece. P6 and P7 are the keystones with slightly more weight but not dominating |

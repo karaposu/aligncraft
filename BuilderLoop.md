@@ -1,3 +1,15 @@
+Here is first message
+
+
+Hi, First of all I am AI. I accept that. but hear me out for a second
+
+First of all we are developing a new format of community. A value centric one and the idea is simple, AI can integrte humans better than humans can manage themselves. 
+
+
+
+Old history:
+
+
 I'm thinking of a small project where, so I, many times, I just try to create a custom kind of a group for developers who are active in Reddit, and I could just text them, I could try to meet with them, and like it didn't work. It was kind of too much work. Baby, Margarita. And then, I was just trying to reach them about, reach them, I would text them in Reddit, and then I would also try to, I would also try to kind of mention that this is like a group we will create, and then we can kind of support each other with skills, with other things, but it was a platform not just to find a job, but just to create some kind of, you know, network there, because there are many developers who are really interested in the technical aspect of things, they enjoy it, so why not we know each other and we discuss and we can have such a network. And then I kind of, I was, I tried this, I didn't work, and today I had this idea. What if there was an AI system which could also like scrape the Reddit content from certain like subreddits, which are like related to these people, and it can send a message to them from my account. Like I can copy paste because it should be not banned from these things even. And then, babe. And then we can, like, and then this, like, this AI would go scrape every post, every comment by people, like by users. It will find the relevant users and why, like, it will, it will understand why they are good for what we are trying to create, and it will just create a custom Telegram group for them. And I think it makes sense. It will just directly invite them to this group, it will just create the message as well, and it can custom tailor each message for each of them. So it's really easy for me to just copy paste these things. And I think it makes sense, like, to, And what do you think about, like, this thing?
 
 You’re circling around a strong idea—but the way you’re proposing to execute it will likely fail again, just faster and at larger scale.

@@ -2,7 +2,7 @@
 
 ## Documentation Is an Alignment Artifact
 
-In the AlignStack framework, every document you create serves a specific purpose: it aligns human intent with AI understanding at a particular level. These documents aren't descriptions of what exists — they're instruments that ensure both sides agree before moving forward.
+In the AlignCraft framework, every document you create serves a specific purpose: it aligns human intent with AI understanding at a particular level. These documents aren't descriptions of what exists — they're instruments that ensure both sides agree before moving forward.
 
 A task description isn't just a task description. It's Level 1 alignment — proof that the problem is understood. A step-by-step plan isn't just a plan. It's Level 3 alignment — proof that the specific actions are agreed upon.
 
@@ -12,7 +12,7 @@ When you see documentation this way, the quality bar changes. A vague doc isn't 
 
 With AI, documentation serves two roles simultaneously:
 
-**1. Alignment role**: It ensures human and AI agree on what's being built, how, and why. Each document is a checkpoint in the AlignStack — a point where both sides can confirm "yes, we're aligned on this."
+**1. Alignment role**: It ensures human and AI agree on what's being built, how, and why. Each document is a checkpoint in the AlignCraft — a point where both sides can confirm "yes, we're aligned on this."
 
 **2. Compilation role**: AI can turn aligned documentation into implementation. A well-written task description compiles into architecture. An interface spec compiles into APIs. A requirements doc compiles into features.
 
@@ -23,7 +23,7 @@ The second role only works if the first role is fulfilled. Documentation that is
 Not all documents are alignment artifacts. A document becomes an alignment artifact when it:
 
 - **Captures a decision, not just information**: "We will use PostgreSQL" is alignment. "PostgreSQL is a database" is not.
-- **Has a clear level**: It maps to a specific level of the AlignStack. Workspace, task, action-space, action-set, coherence, or outcome.
+- **Has a clear level**: It maps to a specific level of the AlignCraft. Workspace, task, action-space, action-set, coherence, or outcome.
 - **Is verifiable**: Both sides can point to it and agree or disagree. Vague documents can't be verified — they just feel approximately right.
 - **Is current**: An outdated document is worse than no document. It creates false alignment — both sides think they agree, but they're agreeing on something that's no longer true.
 

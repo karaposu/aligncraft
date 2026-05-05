@@ -4,7 +4,7 @@
 
 This repository is mainly a writing-and-workflow project for AI-assisted software development. The code shows two connected things:
 
-1. A book called **AlignStack**, built as a website from Markdown chapters.
+1. A book called **AlignCraft**, built as a website from Markdown chapters.
 2. A reusable pack of commands, skills, and file conventions meant to guide tools like Codex or Claude through structured software work.
 
 So this is less a traditional app and more a method: it teaches a way of working with AI, and it also ships the actual prompts and scripts needed to use that method.

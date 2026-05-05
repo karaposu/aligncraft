@@ -28,7 +28,7 @@ Same pattern. Every level. Like Homegrown where every Core runs the same agentic
 
 ## Mapping to Homegrown
 
-| Homegrown | AlignStack |
+| Homegrown | AlignCraft |
 |---|---|
 | Core (agentic loop) | Discipline (internal mini-SIC) |
 | Core spawning sub-Cores | Frontier questions → trigger new discipline runs |
@@ -42,7 +42,7 @@ Same pattern. Every level. Like Homegrown where every Core runs the same agentic
 
 ```
 Homegrown (doing loop):    intent → plan → act → interpret → reflect → ↺
-AlignStack (thinking loop): explore → comprehend → sense → innovate → critique → ↺
+AlignCraft (thinking loop): explore → comprehend → sense → innovate → critique → ↺
 ```
 
 One acts on the world. One understands the world. Together = the full system.

@@ -1,4 +1,4 @@
-# APPENDIX 3: REFACTORING WITH ALIGNSTACK
+# APPENDIX 3: REFACTORING WITH AlignCraft
 
 Best quote regarding refactoring the code is:
 
@@ -6,9 +6,9 @@ Best quote regarding refactoring the code is:
 
 Sometimes requirements change and we might need bigger refactors, but most of the time refactors are something code begs to have, almost as if code is pregnant to a new abstraction or new design pattern.
 
-## THE ALIGNSTACK REFACTORING PHILOSOPHY
+## THE AlignCraft REFACTORING PHILOSOPHY
 
-In AlignStack, refactoring isn't about making code "clean" according to some abstract ideal. It's about recognizing when code is telling you it wants to evolve, and guiding that evolution with AI assistance while maintaining system stability.
+In AlignCraft, refactoring isn't about making code "clean" according to some abstract ideal. It's about recognizing when code is telling you it wants to evolve, and guiding that evolution with AI assistance while maintaining system stability.
 
 ## RECOGNIZING REFACTORING OPPORTUNITIES
 

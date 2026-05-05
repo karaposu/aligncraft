@@ -1,14 +1,14 @@
 #!/bin/bash
-# Install AlignStack skills into OpenAI Codex format
+# Install AlignCraft skills into OpenAI Codex format
 # Downloads skills/*.md → transforms → ~/.agents/skills/<name>/SKILL.md
 #
 # Usage:
 #   bash install_codex.sh
-#   curl -sL https://raw.githubusercontent.com/karaposu/alignstack/main/install_codex.sh | bash
+#   curl -sL https://raw.githubusercontent.com/karaposu/AlignCraft/main/install_codex.sh | bash
 
 set -euo pipefail
 
-RAW_URL="https://raw.githubusercontent.com/karaposu/alignstack/main"
+RAW_URL="https://raw.githubusercontent.com/karaposu/AlignCraft/main"
 TARGET="$HOME/.agents/skills"
 
 # Keep this list in sync with skills/ directory
@@ -41,7 +41,7 @@ SKILLS_DIR="$TMPDIR/skills"
 mkdir -p "$SKILLS_DIR"
 trap 'rm -rf "$TMPDIR"' EXIT
 
-echo "Downloading AlignStack skills..."
+echo "Downloading AlignCraft skills..."
 for cmd in "${REMOTE_SKILLS[@]}"; do
   echo "  downloading $cmd"
   curl -fsSL "$RAW_URL/skills/$cmd" -o "$SKILLS_DIR/$cmd"

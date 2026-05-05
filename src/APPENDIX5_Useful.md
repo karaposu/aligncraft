@@ -1,6 +1,6 @@
 # Appendix 5: Useful Prompts
 
-A collection of prompts for common AlignStack workflows.
+A collection of prompts for common AlignCraft workflows.
 
 ---
 

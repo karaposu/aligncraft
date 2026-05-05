@@ -1,5 +1,7 @@
+---
 name: td-critique
 description: Evaluate candidates by constructing multi-dimensional fitness landscapes, positioning candidates through adversarial testing (prosecution + defense + collision), and producing verdicts (SURVIVE / REFINE / KILL) with constructive output.
+---
 
 # /td-critique — Structural Critique
 

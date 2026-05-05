@@ -7,7 +7,7 @@ devdocs/inquiries/thinking_space_dynamics/_branch.md
 
 ## Mode and Entry
 
-**Mode:** Possibility exploration (hybrid with artifact) — the territory is conceptual (thinking-space dynamics), but several adjacent domains have concrete artifacts worth inventorying (cognitive science, LLM internals, existing AI critic/verifier systems, AlignStack infrastructure).
+**Mode:** Possibility exploration (hybrid with artifact) — the territory is conceptual (thinking-space dynamics), but several adjacent domains have concrete artifacts worth inventorying (cognitive science, LLM internals, existing AI critic/verifier systems, AlignCraft infrastructure).
 
 **Entry:** Signal-first — the user provided strong anchors (attention, focus, intuition as geometric similarity, context) and a specific claim being corrected (real-time value judgment is not limited to structural detection). Start by probing the anchors, then scan outward.
 
@@ -26,7 +26,7 @@ Surface-level inventory of the territory's major regions.
 | **R5: LLM internals as thinking-space substrate** | Embeddings, attention mechanism, layer activations, logit distributions, latent space geometry | The substrate is already multi-dim geometric — alignment with user's framing is nearly native |
 | **R6: AI critic / verifier / judge systems** | LLM-as-judge, verifier models, reward models, self-consistency, Reflexion, Tree-of-Thoughts, deliberate reasoning scaffolds | Applied layer — how real-time value signals get produced in AI systems today |
 | **R7: Philosophy of mind** | Phenomenology, qualia, first-person cognition, Husserl's intentionality, Merleau-Ponty's body-space | Relevant but easy trap — handwaving about consciousness is not a mechanism |
-| **R8: Existing AlignStack infrastructure** | Disciplines, telemetry blocks, `_state.md` relationships, inquiry folder structure, innovation mechanisms | What's already in our system that could ground a thinking-space approximation |
+| **R8: Existing AlignCraft infrastructure** | Disciplines, telemetry blocks, `_state.md` relationships, inquiry folder structure, innovation mechanisms | What's already in our system that could ground a thinking-space approximation |
 | **R9: Insight / hunch research** | Aha-moment studies, incubation effects, meta-cognitive judgments (feeling-of-knowing, tip-of-the-tongue) | Directly names what the user called "hunch" |
 | **R10: Software engineering intuition specifically** | Code smells, architectural taste, "this will work but isn't elegant" judgments | The user's running example — programmer intuition about code quality |
 | **R11: The user's 4 primitives — operational** | Attention, Focus, Intuition (as geometric similarity), Context | What the inquiry must ground concretely |
@@ -38,7 +38,7 @@ Surface-level inventory of the territory's major regions.
 - **Tension at R7:** philosophy of mind is adjacent but seductive. High risk of producing unfalsifiable claims. Flag for DEFERRAL, not probing.
 - **Novelty at R9:** insight/hunch research is specifically about what the user described. Under-explored in the AI/methodology space.
 - **Relevance at R6:** applied AI verifier/judge work is the closest existing engineering analog. Direct implementation reference.
-- **Absence at R8 ∩ R3:** no existing AlignStack concept represents a thinking-space. The disciplines operate, but their state is flat text. The substrate for approximation is not yet constructed.
+- **Absence at R8 ∩ R3:** no existing AlignCraft concept represents a thinking-space. The disciplines operate, but their state is flat text. The substrate for approximation is not yet constructed.
 
 ---
 
@@ -57,7 +57,7 @@ The user named: Attention, Focus, Intuition, Context. Operational definitions:
 | **Intuition** | Multi-dim geometric similarity, including across unrelated surface domains (structural/angular match) | Embedding similarity in latent space (cosine, dot-product), cross-layer activation similarity, analogical structure match | Similarity search across prior findings, archived outputs, `_state.md` relationships |
 | **Context** | Surrounding activation state shaping attention/focus/intuition | Prompt content + system state + prior conversation history | Inquiry `_branch.md` + project-level specs + active working memory (CLAUDE.md, MEMORY.md) |
 
-**Depth finding:** All four primitives have both LLM-native AND system-level analogs. The LLM-native analogs are "inside the generator." The system-level analogs are "outside the generator, in AlignStack's architecture." A buildable approximation can mix both — use LLM-native for within-generation hunches, use system-level for across-inquiry hunches.
+**Depth finding:** All four primitives have both LLM-native AND system-level analogs. The LLM-native analogs are "inside the generator." The system-level analogs are "outside the generator, in AlignCraft's architecture." A buildable approximation can mix both — use LLM-native for within-generation hunches, use system-level for across-inquiry hunches.
 
 ### Probe 2 (R3 ∩ R4) — What "geometric similarity across unrelated surface domains" actually is
 
@@ -101,7 +101,7 @@ What working systems already do:
 | **Verifier models (e.g., math)** | Separate verifier checks proof steps | Yes |
 | **Analogical retrieval** | Retrieve similar past cases, use as anchor | Yes |
 
-**Depth finding:** Real-time value judgment is a SOLVED PROBLEM in applied AI, at least in engineering practice. The prior finding's claim that real-time = structural only is empirically refuted by working systems. The question shifts from "is this possible?" to "which combination fits AlignStack's architecture?"
+**Depth finding:** Real-time value judgment is a SOLVED PROBLEM in applied AI, at least in engineering practice. The prior finding's claim that real-time = structural only is empirically refuted by working systems. The question shifts from "is this possible?" to "which combination fits AlignCraft's architecture?"
 
 ### Probe 5 (R9) — Insight / hunch / meta-cognition
 
@@ -114,9 +114,9 @@ Psychological research on real-time value judgments:
 
 **Depth finding:** Hunches are a KNOWN class of cognitive signal, not magic. They correlate above chance with correctness but below certainty. They can be prompted, elicited, and calibrated. A system's "hunch" is approximable as: probabilistic confidence estimate grounded in retrieval-based similarity and consistency-based stability.
 
-### Probe 6 (R8 ∩ R3) — AlignStack's missing thinking-space layer
+### Probe 6 (R8 ∩ R3) — AlignCraft's missing thinking-space layer
 
-Current AlignStack state:
+Current AlignCraft state:
 - Disciplines operate on inquiry folders, read/write markdown
 - `_state.md` tracks relationships between inquiries
 - Telemetry blocks carry signals per run
@@ -129,13 +129,13 @@ What's ABSENT:
 - No analogical retrieval — "this situation is like that prior situation"
 - No real-time critique step that operates on geometric similarity rather than surface text
 
-**Depth finding:** AlignStack has rich discrete state (folders, markdown, relationships) but no continuous state (embeddings, similarity, distance). Bridging this gap is the concrete Level 0-2 build target. The substrate is text; the missing layer is an embedding/similarity layer over that text.
+**Depth finding:** AlignCraft has rich discrete state (folders, markdown, relationships) but no continuous state (embeddings, similarity, distance). Bridging this gap is the concrete Level 0-2 build target. The substrate is text; the missing layer is an embedding/similarity layer over that text.
 
 ---
 
 ## Cycle 3 — Possibility Space (Approximation Approaches)
 
-Now enumerate possibility candidates — how thinking-space dynamics could be approximated in AlignStack at Level 0-2. Coverage before novelty; include obvious approaches.
+Now enumerate possibility candidates — how thinking-space dynamics could be approximated in AlignCraft at Level 0-2. Coverage before novelty; include obvious approaches.
 
 ### Candidate approximation mechanisms
 
@@ -160,7 +160,7 @@ Now enumerate possibility candidates — how thinking-space dynamics could be ap
 ### Why these are the candidates to carry forward
 
 - **A1–A4** are individually obvious building blocks (standard AI engineering)
-- **A5–A10** are prompt-level or spec-level methodology changes — natural fit for AlignStack's substrate
+- **A5–A10** are prompt-level or spec-level methodology changes — natural fit for AlignCraft's substrate
 - **A11, A14, A15** are architectural — they redefine how value-signal layers relate
 - **A12, A13** are deferrable / second-order
 
@@ -203,11 +203,11 @@ If the system can produce real-time value hunches AND accumulate retrospective v
 
 ### Jump 4 — Existing analogs that were missed in Cycle 1
 
-- **Chess engines' static evaluation** — at each position, evaluate without lookahead. This is real-time value judgment in a constrained domain. The features: material, position, piece mobility, king safety. Hand-crafted then learned. AlignStack analog: what are the "static features" of a finding?
+- **Chess engines' static evaluation** — at each position, evaluate without lookahead. This is real-time value judgment in a constrained domain. The features: material, position, piece mobility, king safety. Hand-crafted then learned. AlignCraft analog: what are the "static features" of a finding?
 - **Code review heuristics** — "this smells bad" before running tests. Linters encode some; humans carry more. Operationalized as style guides + pattern matching.
 - **Design taste in visual fields** — real-time judgment of composition. Characterizable as balance, hierarchy, contrast, rhythm. Not just "I know it when I see it."
 
-**Finding:** Domain-specific real-time value judgment is a general pattern across fields. Each field evolves its own static-evaluation features. AlignStack's features would include: discipline-output fit, relationship-density to prior work, frontier novelty, telemetry-block health, analogical-match depth.
+**Finding:** Domain-specific real-time value judgment is a general pattern across fields. Each field evolves its own static-evaluation features. AlignCraft's features would include: discipline-output fit, relationship-density to prior work, frontier novelty, telemetry-block health, analogical-match depth.
 
 ---
 
@@ -245,8 +245,8 @@ If the system can produce real-time value hunches AND accumulate retrospective v
 | Embedding similarity ≈ surface-similarity intuition | Confirmed |
 | Embedding similarity ≠ structural-analogy intuition | Confirmed |
 | Structural analogy approximable via scaffolded prompts / retrieval | Scanned; mechanism TBD |
-| 4 primitives map cleanly onto LLM + AlignStack | Scanned (both native and system-level analogs exist) |
-| AlignStack has no current thinking-space layer | Confirmed absent |
+| 4 primitives map cleanly onto LLM + AlignCraft | Scanned (both native and system-level analogs exist) |
+| AlignCraft has no current thinking-space layer | Confirmed absent |
 | Buildable MVP exists at L0-2 | Scanned; 15 candidates enumerated |
 | Real-time hunch and retrospective layer are complementary | Confirmed |
 | Calibration is required for hunches to become reliable | Confirmed (substrate-mismatch argument) |
@@ -261,7 +261,7 @@ If the system can produce real-time value hunches AND accumulate retrospective v
 
 1. **Structural-analogy approximation mechanism selection** — multiple candidates (A2, A8, A15) could serve; which is load-bearing?
 2. **"Hunch" elicitation format** — what does a real-time hunch look like as a discipline-level artifact? Prose? Score? Structured slot?
-3. **Thinking-space representation in AlignStack** — embedding index over findings? Over inquiry folders? Over every markdown chunk? Granularity question.
+3. **Thinking-space representation in AlignCraft** — embedding index over findings? Over inquiry folders? Over every markdown chunk? Granularity question.
 4. **Calibration loop mechanics** — how exactly do retrospective signals (L2) tune the hunch mechanism (L3) over time?
 5. **Discipline-level integration** — does each discipline produce its own hunch, or is there a cross-cutting hunch mechanism?
 6. **Attention-field representation** — is "what's in attention right now" a new state object, or derivable from existing state (open inquiries, recent commits, active specs)?

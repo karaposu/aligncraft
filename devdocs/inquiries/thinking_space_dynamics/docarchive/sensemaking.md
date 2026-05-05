@@ -7,7 +7,7 @@ devdocs/inquiries/thinking_space_dynamics/_branch.md
 
 ## SV6 — Stabilized Model
 
-**Thinking-space dynamics are NOT a metaphor — they are a describable computational architecture. Humans and LLMs both instantiate versions of it. Real-time value judgment is the CORE OPERATION of the architecture, not a subjective metric to be avoided. AlignStack currently has this architecture implicitly (inside each discipline invocation) but lacks the explicit geometric substrate that would let it operate consistently across time, across inquiries, and with calibration. The buildable L0-2 MVP is the substrate layer — an embedding index over findings/outputs + scaffolded analogical-retrieval protocols — plus explicit integration of real-time hunches into existing discipline outputs as a new telemetry layer that gets retrospectively calibrated by the prior finding's L2 infrastructure.**
+**Thinking-space dynamics are NOT a metaphor — they are a describable computational architecture. Humans and LLMs both instantiate versions of it. Real-time value judgment is the CORE OPERATION of the architecture, not a subjective metric to be avoided. AlignCraft currently has this architecture implicitly (inside each discipline invocation) but lacks the explicit geometric substrate that would let it operate consistently across time, across inquiries, and with calibration. The buildable L0-2 MVP is the substrate layer — an embedding index over findings/outputs + scaffolded analogical-retrieval protocols — plus explicit integration of real-time hunches into existing discipline outputs as a new telemetry layer that gets retrospectively calibrated by the prior finding's L2 infrastructure.**
 
 ### The Architecture
 
@@ -68,9 +68,9 @@ L2 — Retrospective value (T0+ → T4, delayed, empirical)    [UNCHANGED]
 - The delta between L3's prediction and L2's outcome is calibration data
 - Over time, L3's hunches become more reliable — this is the Baldwin cycle
 
-### What AlignStack Is Missing
+### What AlignCraft Is Missing
 
-AlignStack has discrete state (inquiry folders, markdown, relationships) but no **continuous state**:
+AlignCraft has discrete state (inquiry folders, markdown, relationships) but no **continuous state**:
 - No embedding index over findings, outputs, or inquiry states
 - No similarity-based retrieval across inquiries
 - No representation of "what's in attention right now" as a queryable object
@@ -99,8 +99,8 @@ This reframes the inquiry's stakes. We are not debugging regression detection. W
 | Perspective | What it revealed |
 |---|---|
 | **P1: First-person phenomenology of thinking** | The 4 primitives are not independent — they co-constitute a single cognitive act. This argues AGAINST modeling them as separate services. |
-| **P2: Third-person architectural view** | The architecture is describable: representation space + attention (active set) + focus (selection) + intuition (similarity/analogy query) + context (activation). Each has operational analogs in LLM and in AlignStack. |
-| **P3: Substrate view — what machinery implements this** | LLM is natively multi-dim geometric; AlignStack currently has no continuous state. The MVP build target is making the geometric substrate explicit at the methodology layer. |
+| **P2: Third-person architectural view** | The architecture is describable: representation space + attention (active set) + focus (selection) + intuition (similarity/analogy query) + context (activation). Each has operational analogs in LLM and in AlignCraft. |
+| **P3: Substrate view — what machinery implements this** | LLM is natively multi-dim geometric; AlignCraft currently has no continuous state. The MVP build target is making the geometric substrate explicit at the methodology layer. |
 | **P4: Information-theoretic — what is a hunch as signal** | Probabilistic, correlates above chance with correctness, below certainty. Must be treated as signal-with-reliability, not as truth. Requires calibration. |
 | **P5: Functional / evolutionary** | Real-time hunch exists because waiting for retrospective confirmation is prohibitively expensive. The hunch is a cheap prediction that gets cheaply tested. Without it, all judgment would be retrospective. |
 | **P6: Developmental / Baldwin** | Hunches become reliable through calibration against ground truth. L2 retrospective is therefore not replaced — it is promoted to calibrator-of-L3. |
@@ -116,20 +116,20 @@ Anchor convergence across 7 perspectives on the three-layer architecture, the tw
 - **I2**: Intuition is at least two operations — surface similarity AND structural analogy — and they require different approximation techniques.
 - **I3**: The 4 primitives (attention/focus/intuition/context) are co-constitutive, not independent. Implementation should respect this — a single cognitive act calling the thinking-space, not four separate subsystems.
 - **I4**: LLM latent space is natively the kind of multi-dim geometric space the user described. The substrate match is nearly free; the methodology layer is what's missing.
-- **I5**: AlignStack lacks continuous state. The single biggest structural gap is the absence of an embedding/similarity layer over its existing discrete state.
+- **I5**: AlignCraft lacks continuous state. The single biggest structural gap is the absence of an embedding/similarity layer over its existing discrete state.
 - **I6**: Structural analogy ("angle is the same across unrelated surface domains") is the SIGNATURE ability of deep intuition and the one most likely to be under-delivered by naive embedding-similarity MVPs. It requires scaffolded protocols.
 - **I7**: Real-time hunches without retrospective calibration become confidently wrong. Retrospective validation without real-time hunches never pre-empts. The two are complementary, not alternative.
 - **I8**: The three-layer architecture (L1 structural / L3 real-time-hunch / L2 retrospective) supersedes the prior finding's two-layer architecture. L2 is promoted to calibrator; L3 is added.
 - **I9**: The Baldwin cycle requires real-time hunches as input. This inquiry is therefore load-bearing for the end-goal program, not just a regression-detection refinement.
 - **I10**: LLM "intuition" is a FUNCTIONAL analog of human intuition, not identity. The substrate-distribution mismatch must be accepted operationally and corrected through calibration over time.
-- **I11**: Each AlignStack discipline ALREADY embodies thinking-space dynamics implicitly (E = attention, S = focus, I = intuition, C = verification). The inquiry's MVP makes the geometric substrate EXPLICIT so the disciplines can operate consistently across invocations and inquiries.
-- **I12**: Domain-specific real-time value judgment has working precedents (chess static evaluation, code smell detection, design taste). Each field evolves its own static-evaluation features. AlignStack's features are identifiable.
+- **I11**: Each AlignCraft discipline ALREADY embodies thinking-space dynamics implicitly (E = attention, S = focus, I = intuition, C = verification). The inquiry's MVP makes the geometric substrate EXPLICIT so the disciplines can operate consistently across invocations and inquiries.
+- **I12**: Domain-specific real-time value judgment has working precedents (chess static evaluation, code smell detection, design taste). Each field evolves its own static-evaluation features. AlignCraft's features are identifiable.
 
 ---
 
 ## Ambiguity Resolutions
 
-1. **Is thinking-space a NEW LAYER in AlignStack or a RE-READING of existing disciplines?**
+1. **Is thinking-space a NEW LAYER in AlignCraft or a RE-READING of existing disciplines?**
    → **BOTH.** The disciplines already do thinking-space operations implicitly (exploration IS attention, etc.). What's new is the EXPLICIT GEOMETRIC SUBSTRATE that lets those implicit operations operate consistently across time, across inquiries, with retrieval, and with calibration. Confidence: **HIGH.**
 
 2. **What is "intuition" operationally — surface similarity or structural analogy?**

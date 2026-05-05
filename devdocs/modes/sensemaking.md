@@ -1,8 +1,8 @@
-# Sensemaking: Modes — The Missing Dimension of AlignStack
+# Sensemaking: Modes — The Missing Dimension of AlignCraft
 
 ## Initial Sense Version (SV1 — Baseline Understanding)
 
-The innovation sensemaking analysis concluded that innovation is not a seventh alignment layer but a "mode" — a different way of operating within the same six layers. The user immediately recognized the meta-implication: if innovation is a mode and alignment is a mode, then the six layers are a constant structure that can operate in multiple modes. The user asks: what other modes exist? And proposes that understanding and exploiting modes might be the key to what the AlignStack Agent should achieve.
+The innovation sensemaking analysis concluded that innovation is not a seventh alignment layer but a "mode" — a different way of operating within the same six layers. The user immediately recognized the meta-implication: if innovation is a mode and alignment is a mode, then the six layers are a constant structure that can operate in multiple modes. The user asks: what other modes exist? And proposes that understanding and exploiting modes might be the key to what the AlignCraft Agent should achieve.
 
 This is a question about the architecture of the framework itself — discovering a hidden dimension that was implicit in everything built so far but never named.
 
@@ -16,18 +16,18 @@ This is a question about the architecture of the framework itself — discoverin
 - A mode must be distinguishable by changing how ALL six layers operate, not just one
 - Modes must be more than just "tasks" or "activities" — they represent a shift in posture and intent across the entire system
 - The existing Agent README already has "Operating Modes" (Document/Build/Hybrid) — the new concept must relate to these without conflicting
-- Must be grounded in what AlignStack already does — the existing commands, agents, and workflows should map to modes
+- Must be grounded in what AlignCraft already does — the existing commands, agents, and workflows should map to modes
 
 ### Key Insights
 
 - **The Agent README's "Operating Modes" are actually AUTONOMY LEVELS, not intent modes.** Document/Build/Hybrid describe what you DO about findings (observe, act, or ask). They don't describe what you're TRYING TO ACHIEVE. These are two different dimensions that were conflated under the same word "mode."
-- **Every AlignStack command implies a mode.** The archaeology commands (arch-traces, arch-intro) operate in a different posture than the planning commands (task-plan, roadmap) which are different from the verification commands (critic, verify). These aren't random — they cluster into distinct intents.
+- **Every AlignCraft command implies a mode.** The archaeology commands (arch-traces, arch-intro) operate in a different posture than the planning commands (task-plan, roadmap) which are different from the verification commands (critic, verify). These aren't random — they cluster into distinct intents.
 - **Mode transitions are where agent intelligence lives.** A single-mode agent is a script. A multi-mode agent that knows when to switch between exploration, alignment, innovation, and diagnosis — that's intelligent behavior. The agents' value isn't just monitoring their layer, it's knowing which mode to operate in.
 - **Different agents can be in different modes simultaneously.** Workspace Agent might be in Maintenance mode (checking freshness) while Task Agent is in Alignment mode (understanding a new task) while Action-Space Agent is in Innovation mode (nothing fits, exploring novel approaches). This is richer than the current architecture describes.
 
 ### Structural Points
 
-- There are (at least) three structural dimensions to the AlignStack operating space:
+- There are (at least) three structural dimensions to the AlignCraft operating space:
   1. **Layers** — WHERE you operate (the six alignment dimensions) — CONSTANT
   2. **Intent Modes** — WHY you operate (what you're trying to achieve) — VARIABLE
   3. **Autonomy Levels** — HOW you respond (observe, act, or escalate) — CONFIGURABLE
@@ -53,7 +53,7 @@ This is a question about the architecture of the framework itself — discoverin
 
 #### Sense Version 2 (SV2 — Anchor-Informed Understanding)
 
-The picture has shifted from "what other modes exist" (SV1) to something deeper: **modes are a missing structural dimension of AlignStack itself.** The framework currently has layers (WHERE) and pillars (WHAT CONDITIONS). Modes add WHY — the intent that changes how you operate within the layers. This isn't just about finding a list of modes; it's about recognizing that mode-awareness is the key capability the AlignStack Agent needs.
+The picture has shifted from "what other modes exist" (SV1) to something deeper: **modes are a missing structural dimension of AlignCraft itself.** The framework currently has layers (WHERE) and pillars (WHAT CONDITIONS). Modes add WHY — the intent that changes how you operate within the layers. This isn't just about finding a list of modes; it's about recognizing that mode-awareness is the key capability the AlignCraft Agent needs.
 
 The existing "Operating Modes" (Document/Build/Hybrid) are a separate dimension — autonomy level — that was mislabeled. The real modes (intent modes) are something else entirely.
 
@@ -70,7 +70,7 @@ To qualify as a genuine mode (not just a task or activity), a candidate must pas
 3. **Distinct relationship to the four pillars** — it emphasizes different pillars or uses them differently
 4. **Distinct trigger** — something specific causes the system to enter this mode
 
-Applying these tests to candidates derived from existing AlignStack commands and workflows:
+Applying these tests to candidates derived from existing AlignCraft commands and workflows:
 
 **Exploration** — "What exists?"
 - Workspace: what files, what structure? | Task: what does this project do? | Action-Space: what approaches are in use? | Action-Set: what's the current implementation? | Coherence: how do parts fit together? | Outcome: what does the system produce?
@@ -148,14 +148,14 @@ New anchor: **Modes are already how developers naturally work. The framework nam
 
 ### Strategic / Long-term
 
-If modes are the key dimension, the AlignStack Agent architecture needs restructuring:
+If modes are the key dimension, the AlignCraft Agent architecture needs restructuring:
 
 Current: 6 agents × 3 autonomy levels = 18 configurations
 With modes: 6 agents × 7 intent modes × 3 autonomy levels = 126 configurations
 
 But not all combinations are meaningful. The power is in mode TRANSITIONS — the agent's ability to detect "I should switch from Alignment to Diagnostic" or "Action-Space Agent is in Innovation mode while Coherence Agent stays in Alignment mode."
 
-This is the strategic insight: **mode-awareness is the differentiator between AlignStack Agent and every other AI development tool.** Current tools are locked in a single mode (Alignment, roughly). AlignStack Agent would be the first system that consciously switches between exploration, alignment, innovation, diagnosis, maintenance, recovery, and reflection.
+This is the strategic insight: **mode-awareness is the differentiator between AlignCraft Agent and every other AI development tool.** Current tools are locked in a single mode (Alignment, roughly). AlignCraft Agent would be the first system that consciously switches between exploration, alignment, innovation, diagnosis, maintenance, recovery, and reflection.
 
 New anchor: **The competitive advantage is not in any single mode but in the mode-switching intelligence.**
 
@@ -179,7 +179,7 @@ The CLAUDE.md archaeology freshness check is already an implicit Maintenance mod
 
 Major shifts from SV2:
 
-1. **Modes are a third structural dimension, not an add-on.** AlignStack now has three dimensions: Layers (WHERE), Modes (WHY), Autonomy (HOW). This is a significant architectural evolution.
+1. **Modes are a third structural dimension, not an add-on.** AlignCraft now has three dimensions: Layers (WHERE), Modes (WHY), Autonomy (HOW). This is a significant architectural evolution.
 
 2. **Mode-switching intelligence is the key differentiator.** What makes the agent system valuable isn't its ability to operate in any single mode — it's the ability to detect which mode is appropriate and transition smoothly.
 
@@ -201,7 +201,7 @@ Major shifts from SV2:
 
 **What now depends on this choice?** The framework description should acknowledge that alignment is achieved THROUGH multiple modes, not just through the alignment mode.
 
-**What changed in the conceptual model?** AlignStack becomes a multi-modal alignment system, not a single-modal one.
+**What changed in the conceptual model?** AlignCraft becomes a multi-modal alignment system, not a single-modal one.
 
 ---
 
@@ -267,7 +267,7 @@ Major shifts from SV2:
 
 #### Sense Version 4 (SV4 — Clarified Understanding)
 
-AlignStack has three structural dimensions:
+AlignCraft has three structural dimensions:
 
 1. **Six Layers** (constant) — WHERE alignment operates
 2. **Seven Intent Modes** (variable, per-agent) — WHY the system operates
@@ -275,7 +275,7 @@ AlignStack has three structural dimensions:
 
 The seven intent modes are: Exploration, Alignment, Innovation, Diagnostic, Maintenance, Recovery, Reflection.
 
-Each mode passes the four-test qualification (cross-layer impact, distinct success criteria, distinct pillar emphasis, distinct trigger). Modes are per-agent, not global. Mode transitions are signal-driven. Mode-switching intelligence is the key capability that differentiates AlignStack Agent from single-mode tools.
+Each mode passes the four-test qualification (cross-layer impact, distinct success criteria, distinct pillar emphasis, distinct trigger). Modes are per-agent, not global. Mode transitions are signal-driven. Mode-switching intelligence is the key capability that differentiates AlignCraft Agent from single-mode tools.
 
 The existing "Operating Modes" (Document/Build/Hybrid) in agent/README.md are actually Autonomy Levels — a separate dimension that combines orthogonally with Intent Modes.
 
@@ -298,7 +298,7 @@ The existing "Operating Modes" (Document/Build/Hybrid) in agent/README.md are ac
 - Modes as a global switch (rejected: per-agent)
 - "Execution" as a separate mode (it's Alignment + Build autonomy)
 - Modes as the same thing as autonomy levels (they're orthogonal)
-- The idea that AlignStack only operates in alignment mode
+- The idea that AlignCraft only operates in alignment mode
 
 ### Remaining viable paths
 
@@ -311,7 +311,7 @@ The existing "Operating Modes" (Document/Build/Hybrid) in agent/README.md are ac
 
 #### Sense Version 5 (SV5 — Constrained Understanding)
 
-The complete AlignStack operating space:
+The complete AlignCraft operating space:
 
 ```
                Layers (WHERE)              ×    Modes (WHY)        ×  Autonomy (HOW)
@@ -362,7 +362,7 @@ Reflection → (any mode, informed by insight)
 
 ### Final Sense Version (SV6 — Stabilized Model)
 
-## Modes: The Missing Dimension of AlignStack
+## Modes: The Missing Dimension of AlignCraft
 
 ### Core Discovery
 
@@ -370,7 +370,7 @@ The six alignment layers describe WHERE alignment operates. The four pillars des
 
 **Modes are the missing WHY dimension.** They are the intent that changes how all six layers operate simultaneously. The layers are constant. The modes are variable. The intelligence is in choosing the right mode and knowing when to switch.
 
-### The Three Dimensions of AlignStack
+### The Three Dimensions of AlignCraft
 
 | Dimension | What it describes | Elements | Variability |
 |-----------|------------------|----------|-------------|
@@ -408,11 +408,11 @@ Pillar emphasis: **Comparison** between broken state and known-good state (pilla
 Learn from history. Extract patterns, document decisions, identify trajectories. Activated at milestones, end of periods, or after significant work.
 Pillar emphasis: retroactive **Explicitness** — making the past explicit (pillar 1).
 
-### Why Modes Are the Key for AlignStack Agent
+### Why Modes Are the Key for AlignCraft Agent
 
 **1. Mode-switching intelligence is the differentiator.**
 
-Every existing AI development tool operates in essentially one mode: Alignment (or more precisely, a degraded version of Alignment that only covers Action-Set). The intelligence of AlignStack Agent isn't in being better at any single mode — it's in knowing which mode to operate in and when to switch.
+Every existing AI development tool operates in essentially one mode: Alignment (or more precisely, a degraded version of Alignment that only covers Action-Set). The intelligence of AlignCraft Agent isn't in being better at any single mode — it's in knowing which mode to operate in and when to switch.
 
 A system that can:
 - Start in Exploration when facing new territory
@@ -461,4 +461,4 @@ These combine: Exploration + Document = map the territory, report findings. Diag
 
 ### How SV6 Differs from SV1
 
-SV1 asked "what other modes might exist besides alignment and innovation?" — treating modes as a curiosity worth enumerating. SV6 reveals that modes are a **fundamental structural dimension of AlignStack** that was always present but unnamed. The framework is not six layers with occasional modes — it is six layers × seven modes × three autonomy levels, where mode-switching intelligence is the primary source of agent capability. This restructures the entire understanding of what AlignStack Agent is and why it's different from existing tools.
+SV1 asked "what other modes might exist besides alignment and innovation?" — treating modes as a curiosity worth enumerating. SV6 reveals that modes are a **fundamental structural dimension of AlignCraft** that was always present but unnamed. The framework is not six layers with occasional modes — it is six layers × seven modes × three autonomy levels, where mode-switching intelligence is the primary source of agent capability. This restructures the entire understanding of what AlignCraft Agent is and why it's different from existing tools.

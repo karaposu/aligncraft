@@ -1,4 +1,4 @@
-# AlignStack: Aligning Human Intent with AI Implementation
+# AlignCraft: Aligning Human Intent with AI Implementation
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 - Emergence of New Design Patterns
 - The Documentation Inversion
 
-**Chapter 2: The AlignStack Framework**
+**Chapter 2: The AlignCraft Framework**
 - The Alignment Chain
 - Alignment Artifacts
 
@@ -36,7 +36,7 @@
 **Chapter 5: The Data Dump**
 - Starting with complete context
 
-### Part III: AlignStack Patterns
+### Part III: AlignCraft Patterns
 
 **Chapter 6: DevDocs Pattern**
 - Foundation Docs
@@ -75,12 +75,12 @@
 
 - Appendix 1: New Project Prompts
 - Appendix 2: From Existing Codebase Prompts
-- Appendix 3: Refactoring with AlignStack
+- Appendix 3: Refactoring with AlignCraft
 - Appendix 4: Adding New Features
 - Appendix 5: Useful Prompts
 - Appendix 6: Sense Making
 - Appendix 7: Dynamic Prompts
-- Appendix 8: AlignStack Slash Commands
+- Appendix 8: AlignCraft Slash Commands
 - Appendix 9: DevDocs Folder Convention
 
 ---

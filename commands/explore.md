@@ -1,5 +1,7 @@
+---
 name: explore
 description: Map unknown territory through iterative scan-signal-probe cycles at managed resolution levels, tracking the frontier between known and unknown, and assessing confidence across the map.
+---
 
 # /explore — Structural Exploration
 

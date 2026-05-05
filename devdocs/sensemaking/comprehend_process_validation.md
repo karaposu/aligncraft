@@ -27,18 +27,18 @@ The user asks whether the engineered 5-phase process actually captures the cogni
 
 - **S1:** The depth hierarchy (Surface → Generative) is more clearly "about comprehension" than the phases. The hierarchy describes states of understanding. The phases describe activities.
 - **S2:** The "start from priors" element is the most authentically comprehension-shaped component.
-- **S3:** All AlignStack disciplines are prescriptive. Comprehend's prescriptive nature is consistent, not disqualifying.
+- **S3:** All AlignCraft disciplines are prescriptive. Comprehend's prescriptive nature is consistent, not disqualifying.
 
 ### Foundational Principles
 
 - **P1:** A discipline's value is measured by: does it reliably produce the cognitive transform?
-- **P2:** All AlignStack disciplines are prescriptive scaffolds around intuitive operations. Comprehend follows the same pattern.
+- **P2:** All AlignCraft disciplines are prescriptive scaffolds around intuitive operations. Comprehend follows the same pattern.
 
 ---
 
 ### SV2 — Anchor-Informed Understanding
 
-The process is an ENGINEERED METHOD for reliable comprehension, not a DESCRIPTION of natural comprehension. This is consistent with all AlignStack disciplines. The hidden three-part structure (acquisition → verification → crystallization) should be made explicit, because verification is where the unique value lives.
+The process is an ENGINEERED METHOD for reliable comprehension, not a DESCRIPTION of natural comprehension. This is consistent with all AlignCraft disciplines. The hidden three-part structure (acquisition → verification → crystallization) should be made explicit, because verification is where the unique value lives.
 
 ---
 

@@ -4,7 +4,7 @@
 
 The user wants to understand innovation as a structural process — not just "creativity happens" but the actual mechanics of how novel ideas form, survive resistance, and become accepted. The sample.md conversation is the primary specimen: an idea was introduced, rejected under one frame, then reframed under new conditions and accepted. The user observes that innovation "requires inspecting information under new lenses... but not only" — meaning reframing is one component, not the whole picture.
 
-Additionally, AlignStack's six alignment layers assume solutions exist and need finding. Innovation is when solutions don't exist and must be created. This creates a gap in the framework that needs understanding.
+Additionally, AlignCraft's six alignment layers assume solutions exist and need finding. Innovation is when solutions don't exist and must be created. This creates a gap in the framework that needs understanding.
 
 ---
 
@@ -15,7 +15,7 @@ Additionally, AlignStack's six alignment layers assume solutions exist and need 
 - Innovation cannot be reduced to a single operation (the user explicitly says "not only" reframing)
 - The framework must be structural — comparable in rigor to the Sensemaking Framework, not a list of tips
 - Must account for what happened in sample.md (the concrete specimen)
-- Must relate to AlignStack's six layers — either extending them or explaining how innovation fits alongside them
+- Must relate to AlignCraft's six layers — either extending them or explaining how innovation fits alongside them
 - Must work beyond software — the sample.md conversation is about business strategy, not code
 
 ### Key Insights
@@ -23,7 +23,7 @@ Additionally, AlignStack's six alignment layers assume solutions exist and need 
 - **The sample.md pattern is a complete innovation cycle in miniature:** Idea → Resistance → Reframe (introduce convergence condition) → Acceptance → Extension (proprietary frameworks, skills vs methodology). This is observable, repeatable structure.
 - **The AI's resistance was not wrong — it was evaluating under the wrong conditions.** The original framing ("methodology vs intelligence, today") correctly produces "intelligence matters more." The innovation was changing the conditions of evaluation, not the idea itself.
 - **Innovation creates new explicitness.** Before the user introduced "convergence," the value of methodology under convergence conditions was not explicit. The innovation made it explicit. Once explicit, the four pillars could process it (visible → measurable → comparable). Innovation is the upstream source of what alignment then operates on.
-- **AlignStack layers assume a known landscape. Innovation creates new landscape.** The layers describe alignment failures within known territory. Innovation is terrain creation — it produces new territory that then needs aligning.
+- **AlignCraft layers assume a known landscape. Innovation creates new landscape.** The layers describe alignment failures within known territory. Innovation is terrain creation — it produces new territory that then needs aligning.
 
 ### Structural Points
 
@@ -89,7 +89,7 @@ New anchor: **In innovation, the idea often arrives before its justification. Th
 
 If innovation has structural components, it can potentially be systematized — not in the sense of "follow these steps to innovate" (that would be optimization), but in the sense of: "here are the operations that produce novel ideas, here is how to recognize when you're in an innovation process, and here is how to support rather than kill it."
 
-For AlignStack, this means the framework could account for innovation explicitly, rather than treating it as something that happens outside the system. The `/imagine-feasible` command already gestures at this — it's an innovation mechanism (explore beyond known patterns).
+For AlignCraft, this means the framework could account for innovation explicitly, rather than treating it as something that happens outside the system. The `/imagine-feasible` command already gestures at this — it's an innovation mechanism (explore beyond known patterns).
 
 New anchor: **A framework for innovation is not a recipe for novel ideas. It's a structural description of the conditions, mechanisms, and lifecycle that allow novelty to emerge and survive.**
 
@@ -115,7 +115,7 @@ The Sensemaking Framework succeeds at this — it describes phases and operation
 
 Innovation has a paradoxical relationship with alignment systems. Alignment systems resist innovation by design — they evaluate new things against existing frames and flag mismatches. This is correct behavior for maintaining system integrity. But it means alignment systems can actively suppress novel ideas that don't fit current conditions.
 
-AlignStack's Coherence Agent, for example, checks every change against existing system state. A truly innovative change might deliberately violate coherence — introducing a new pattern that conflicts with the old one. The system needs to distinguish between "this breaks coherence because it's wrong" and "this breaks coherence because it's new."
+AlignCraft's Coherence Agent, for example, checks every change against existing system state. A truly innovative change might deliberately violate coherence — introducing a new pattern that conflicts with the old one. The system needs to distinguish between "this breaks coherence because it's wrong" and "this breaks coherence because it's new."
 
 New anchor: **Innovation and alignment are in structural tension. Alignment preserves known-good states. Innovation deliberately disrupts them. A mature system needs both.**
 
@@ -171,7 +171,7 @@ Major shifts from SV2:
 
 ---
 
-#### Ambiguity: How does innovation relate to AlignStack's six layers?
+#### Ambiguity: How does innovation relate to AlignCraft's six layers?
 
 **Resolution:** Innovation and alignment operate on the same territory but in different modes:
 
@@ -192,7 +192,7 @@ Innovation is NOT a seventh layer. It is a **mode of operation** that can occur 
 
 **What now depends on this choice?** The framework must show innovation as a cross-cutting concern that affects all six layers, not a bolt-on addition.
 
-**What changed in the conceptual model?** The AlignStack framework gains a dual-mode character: alignment mode (navigate known landscape) and innovation mode (create new landscape). Both use the same six layers but with different intent.
+**What changed in the conceptual model?** The AlignCraft framework gains a dual-mode character: alignment mode (navigate known landscape) and innovation mode (create new landscape). Both use the same six layers but with different intent.
 
 ---
 
@@ -222,7 +222,7 @@ Innovation is now understood as a **structured dual-mode operation** with:
 
 - **Seven mechanisms** (lens shifting, combination, inversion, constraint manipulation, absence recognition, domain transfer, extrapolation)
 - **Seven lifecycle phases** (signal → raw formation → confrontation → mechanism application → re-evaluation → extension → integration)
-- **Cross-cutting relationship to AlignStack** — not a seventh layer but a mode that operates at any of the six layers
+- **Cross-cutting relationship to AlignCraft** — not a seventh layer but a mode that operates at any of the six layers
 
 The sample.md conversation maps cleanly: Signal (user's gut feeling) → Raw Formation ("maybe methodology matters more") → Confrontation (AI: "model quality sets the ceiling") → Mechanism Application (lens shift + constraint addition: "under convergence conditions") → Re-evaluation (AI: "much stronger") → Extension (proprietary frameworks, skill vs methodology) → Integration (the thesis becomes a defensible position).
 
@@ -237,7 +237,7 @@ What is no longer viable: the idea that innovation is structurally unanalyzable,
 - Innovation is a structured process, not an irreducible mystery
 - Innovation has multiple mechanisms (at least seven identified)
 - Innovation follows a lifecycle (seven phases)
-- Innovation is a mode of operation that cross-cuts AlignStack's six layers
+- Innovation is a mode of operation that cross-cuts AlignCraft's six layers
 - Innovation and alignment are complementary but in structural tension
 - The sample.md conversation is a valid specimen of a complete innovation cycle
 - Innovation creates new explicitness — it's the upstream source that alignment then operates on
@@ -254,7 +254,7 @@ What is no longer viable: the idea that innovation is structurally unanalyzable,
 
 - Whether the seven mechanisms are exhaustive or exemplary (likely exemplary — more may exist)
 - Whether the lifecycle is always sequential or can be recursive (likely recursive — you can cycle through mechanism application multiple times)
-- How the framework should be formalized — as a standalone document, an extension to AlignStack, or a pattern in the book
+- How the framework should be formalized — as a standalone document, an extension to AlignCraft, or a pattern in the book
 - Whether the framework should describe HOW to apply each mechanism (prescriptive) or only describe what they ARE (descriptive)
 
 ---
@@ -369,7 +369,7 @@ The four pillars describe what alignment needs. Innovation is what creates the m
 
 ### Correcting the Earlier Discussion
 
-The previous discussion about innovation and AlignStack was:
+The previous discussion about innovation and AlignCraft was:
 - **Correct** that Action-Space is where innovation is most visible (recognizing "nothing fits")
 - **Correct** that the six layers assume a known landscape
 - **Incorrect** that innovation is outside the framework — it's a mode within it

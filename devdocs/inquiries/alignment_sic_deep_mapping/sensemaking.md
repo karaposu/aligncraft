@@ -7,7 +7,7 @@ devdocs/inquiries/alignment_sic_deep_mapping/_branch.md
 
 ## SV6 — Stabilized Model
 
-**The breakthrough: AlignStack's alignment chain and the SIC cognitive loop are the SAME SYSTEM from two perspectives.**
+**The breakthrough: AlignCraft's alignment chain and the SIC cognitive loop are the SAME SYSTEM from two perspectives.**
 
 ### The Structural Identity
 
@@ -85,7 +85,7 @@ Each field IS an alignment check. The delta between fields (original → rephras
 1. **Self-improvement gets direction.** Alignment failures reveal which discipline needs work. "L2 failed" → improve S's scope methodology.
 2. **SIC's sequential structure IS alignment enforcement.** Can't skip S and go to I = can't skip L0-L2 and go to L3-L4.
 3. **The four pillars are the next frontier.** Explicitness/Visibility mostly done. Measurement/Comparison partial. Make alignment measurable and comparable across inquiries.
-4. **One system, not two.** AlignStack theory and thinking disciplines practice discovered from two directions. Every improvement to one IS an improvement to the other.
+4. **One system, not two.** AlignCraft theory and thinking disciplines practice discovered from two directions. Every improvement to one IS an improvement to the other.
 
 ---
 

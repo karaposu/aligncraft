@@ -28,7 +28,7 @@ A structural model of thinking-space + a Level 0-2 approximation mechanism, with
 
 The prior finding (`importance_measurement_problem`) was half-right. Value IS retrospective in all cognitive-quality domains — that part of the prior finding stands. But the prior finding then concluded that real-time regression detection is bounded to STRUCTURAL regression — and this conclusion is wrong. Humans make real-time value judgments constantly. A programmer sees a refactor and says "this will work but isn't elegant — let me try a different angle" long before any downstream confirmation. The judgment is real-time, not structural, and not subjective in the sense of "beyond mechanism." It is the cognitive act of intuition operating on a thinking-space.
 
-Applied AI already implements working versions of this — LLM-as-judge, chain-of-thought, self-consistency, analogical retrieval — so the capability is not theoretical. The question is which combination fits AlignStack's architecture and how to avoid the failure modes that would cause it to silently mis-approximate the signature capability.
+Applied AI already implements working versions of this — LLM-as-judge, chain-of-thought, self-consistency, analogical retrieval — so the capability is not theoretical. The question is which combination fits AlignCraft's architecture and how to avoid the failure modes that would cause it to silently mis-approximate the signature capability.
 
 ### 2. The architecture of thinking-space
 
@@ -298,4 +298,4 @@ From the inquiry's frontier and deferred work:
 
 10. **Attention decay across invocations** — the active attention set is currently constructed at invocation time. A durable attention representation that decays over time across invocations (suggested in exploration cycle 5a) is deferred. Useful if hunches need continuity across sessions.
 
-11. **Empirical Baldwin cycle rate** — Phase 5 Baldwin seed-generation activates after calibration threshold. At what rate does AlignStack actually run Baldwin cycles? If the rate is too low, the seed-generator may accumulate patterns slowly enough that it never reaches useful density. Measure after Phase 4 operation.
+11. **Empirical Baldwin cycle rate** — Phase 5 Baldwin seed-generation activates after calibration threshold. At what rate does AlignCraft actually run Baldwin cycles? If the rate is too low, the seed-generator may accumulate patterns slowly enough that it never reaches useful density. Measure after Phase 4 operation.

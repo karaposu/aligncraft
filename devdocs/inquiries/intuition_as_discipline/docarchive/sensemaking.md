@@ -15,7 +15,7 @@ The user proposes a three-step transform architecture for intuition (forward-tra
 
 ### Constraints
 
-- **Discipline quality bar:** Must match the structural rigor of existing AlignStack disciplines (`/explore`, `/sense-making`, `/decompose`, `/innovate`, `/td-critique`). Each has: numbered process model, named failure modes (6–7), convergence criteria, clear I/O, distinguishing definition.
+- **Discipline quality bar:** Must match the structural rigor of existing AlignCraft disciplines (`/explore`, `/sense-making`, `/decompose`, `/innovate`, `/td-critique`). Each has: numbered process model, named failure modes (6–7), convergence criteria, clear I/O, distinguishing definition.
 - **Architectural preservation:** The prior finding's three-layer architecture (L1 structural + L3 real-time hunch + L2 retrospective/calibrator) stands. Only the L3 MECHANISM is under revision.
 - **Schema preservation:** The prior finding's Popperian hunch schema (prediction + prediction_window + observable_outcome + reliability + INSUFFICIENT_HUNCH state) must carry forward as intuition's output format.
 - **Concrete embedding answer:** "Embeddings optional" must be resolved concretely (yes/no/conditional), not deferred.
@@ -88,7 +88,7 @@ The technical, strategic, and definitional-internal perspectives all converge on
 
 ## SV3 — Multi-Perspective Understanding
 
-The proposal's central move (three-step transform) is sound, but the Z-transform analogy contains an internal gap: natural-language abstraction isn't linear or exactly invertible. The inverse step must be rescued — SME's Projection (selective mapping of transferable structural parts) closes the gap. Once this is made explicit, the architecture becomes: **CBR's Retrieve + Reuse + Revise loop, structured through SME's Alignment + Projection for the mapping step, framed via the transform-technique pattern for pedagogical clarity, delivered as a first-class AlignStack discipline.** This is more precise than SV2 and grounded in named intellectual precedents.
+The proposal's central move (three-step transform) is sound, but the Z-transform analogy contains an internal gap: natural-language abstraction isn't linear or exactly invertible. The inverse step must be rescued — SME's Projection (selective mapping of transferable structural parts) closes the gap. Once this is made explicit, the architecture becomes: **CBR's Retrieve + Reuse + Revise loop, structured through SME's Alignment + Projection for the mapping step, framed via the transform-technique pattern for pedagogical clarity, delivered as a first-class AlignCraft discipline.** This is more precise than SV2 and grounded in named intellectual precedents.
 
 ---
 
@@ -185,7 +185,7 @@ HIGH CONFIDENCE.
 
 ### Ambiguity 9: Retention / learning over time (CBR's Retain step)
 
-**Resolution:** **Deferred for MVP.** Intuition seeds are recorded in a log (for calibration against L2 outcomes) but NOT added to the corpus as new cases in the CBR sense. Retention in AlignStack already exists via normal inquiry archiving — findings are the cases. Adding a parallel case-base would fork the data model. Revisit if the corpus becomes saturated and CBR's case-adaptation benefits (revise = adapt prior solutions) become load-bearing. MEDIUM CONFIDENCE (could be revisited).
+**Resolution:** **Deferred for MVP.** Intuition seeds are recorded in a log (for calibration against L2 outcomes) but NOT added to the corpus as new cases in the CBR sense. Retention in AlignCraft already exists via normal inquiry archiving — findings are the cases. Adding a parallel case-base would fork the data model. Revisit if the corpus becomes saturated and CBR's case-adaptation benefits (revise = adapt prior solutions) become load-bearing. MEDIUM CONFIDENCE (could be revisited).
 
 - **Fixed for MVP:** no parallel case-base; seeds logged for calibration only; corpus = findings
 - **Not allowed for MVP:** adding new cases beyond normal archiving; using CBR's full learning loop
@@ -275,7 +275,7 @@ The work is concrete rather than speculative. Every remaining decision is bounde
 
 ### SV6 — Stabilized Model
 
-**/intuit is a first-class AlignStack thinking discipline that operates the L3 real-time hunch layer of the three-layer architecture (established by `thinking_space_dynamics`), architected as a scale-adaptive transform-space recognition-and-transfer mechanism grounded in Case-Based Reasoning (Retrieve-Reuse-Revise) and Structure-Mapping Engine (Alignment-Projection) precedent.**
+**/intuit is a first-class AlignCraft thinking discipline that operates the L3 real-time hunch layer of the three-layer architecture (established by `thinking_space_dynamics`), architected as a scale-adaptive transform-space recognition-and-transfer mechanism grounded in Case-Based Reasoning (Retrieve-Reuse-Revise) and Structure-Mapping Engine (Alignment-Projection) precedent.**
 
 #### The architecture
 

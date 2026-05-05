@@ -1,6 +1,6 @@
-# Slash Commands & Skills: Packaging AlignStack Prompts
+# Slash Commands & Skills: Packaging AlignCraft Prompts
 
-AlignStack prompts fall into two categories based on complexity: **slash commands** for single-step operations and **skills** for multi-step workflows.
+AlignCraft prompts fall into two categories based on complexity: **slash commands** for single-step operations and **skills** for multi-step workflows.
 
 ## The Distinction
 
@@ -13,7 +13,7 @@ Rule of thumb: if it can run once and produce a useful result, it's a slash comm
 
 ## Core Slash Commands
 
-These four commands form the primary AlignStack workflow. Each feeds into the next, but all can be used independently.
+These four commands form the primary AlignCraft workflow. Each feeds into the next, but all can be used independently.
 
 ### `/elaborate`
 Take raw, messy input (data dump, ticket, notes) and rephrase it back for alignment verification. Uses codebase context to interpret what the user means.
@@ -116,7 +116,7 @@ From idea to prototype — data dump through module implementation loop.
 → Source: Appendix 1 (Phases 0–14)
 
 ### `adopt-codebase`
-Apply AlignStack to an existing codebase using the archaeology pattern.
+Apply AlignCraft to an existing codebase using the archaeology pattern.
 
 **Steps orchestrated:**
 1. `/archaeology-summary` — Non-technical project summary
@@ -198,7 +198,7 @@ A hook is a script that fires on a specific event. Claude Code supports several 
 | `SessionStart` | When a session begins or resumes |
 | `Stop` | When Claude finishes responding |
 
-The key one for AlignStack is `PreToolUse` — it can intercept file writes and modify the content before the file is created.
+The key one for AlignCraft is `PreToolUse` — it can intercept file writes and modify the content before the file is created.
 
 ### Where hooks live
 
@@ -244,7 +244,7 @@ A `PreToolUse` hook receives the tool's input as JSON on stdin. It can:
 
 This means a hook can intercept a file write, prepend content to it, and return the modified version — all before the file hits disk.
 
-### AlignStack hook: Auto-inject metadata into devdocs
+### AlignCraft hook: Auto-inject metadata into devdocs
 
 Every devdocs file should carry a metadata header (see Appendix 9). Instead of relying on each slash command to remember this, a `PreToolUse` hook can inject it automatically on every write to `devdocs/`.
 

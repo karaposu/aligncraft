@@ -85,7 +85,7 @@ New anchor: **Intuition = context + valuation + motivation. The framework accoun
 
 ### Strategic / Long-term
 
-If AlignStack Agent needs to operate in Innovation mode, it needs SOMETHING that performs the function of intuition. Without it, the agent can apply mechanisms but doesn't know where to point them. It has coverage but no direction.
+If AlignCraft Agent needs to operate in Innovation mode, it needs SOMETHING that performs the function of intuition. Without it, the agent can apply mechanisms but doesn't know where to point them. It has coverage but no direction.
 
 Options:
 1. The user always provides direction (intuition stays human)

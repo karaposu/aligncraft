@@ -1,10 +1,10 @@
 #!/bin/bash
-# Install AlignStack slash commands and hooks for Claude Code
-# Usage: curl -sL https://raw.githubusercontent.com/karaposu/alignstack/main/install_claude.sh | bash
+# Install AlignCraft slash commands and hooks for Claude Code
+# Usage: curl -sL https://raw.githubusercontent.com/karaposu/AlignCraft/main/install_claude.sh | bash
 
 set -e
 
-REPO_URL="https://raw.githubusercontent.com/karaposu/alignstack/main"
+REPO_URL="https://raw.githubusercontent.com/karaposu/AlignCraft/main"
 COMMANDS_DIR="$HOME/.claude/commands"
 HOOKS_DIR="$HOME/.claude/hooks"
 
@@ -59,6 +59,42 @@ for hook in "${hooks[@]}"; do
   curl -sL "$REPO_URL/hooks/$hook" -o "$HOOKS_DIR/$hook"
   chmod +x "$HOOKS_DIR/$hook"
 done
+
+# --- Settings: grant Read access to ~/.claude/skills ---
+
+echo ""
+echo "Updating ~/.claude/settings.json..."
+
+SETTINGS_FILE="$HOME/.claude/settings.json"
+SKILLS_DIR="$HOME/.claude/skills"
+ALLOW_RULE="Read(//$SKILLS_DIR/**)"
+
+if ! command -v jq >/dev/null 2>&1; then
+  echo "  jq not installed — skipping. Add manually to $SETTINGS_FILE:"
+  echo "    permissions.allow              += [\"$ALLOW_RULE\"]"
+  echo "    permissions.additionalDirectories += [\"$SKILLS_DIR\"]"
+else
+  [ -f "$SETTINGS_FILE" ] || echo '{}' > "$SETTINGS_FILE"
+
+  tmp=$(mktemp)
+  if jq \
+       --arg rule "$ALLOW_RULE" \
+       --arg dir "$SKILLS_DIR" \
+       '
+       .permissions                       = (.permissions // {})
+       | .permissions.allow                 = (.permissions.allow // [])
+       | .permissions.additionalDirectories = (.permissions.additionalDirectories // [])
+       | if (.permissions.allow | index($rule)) then . else .permissions.allow += [$rule] end
+       | if (.permissions.additionalDirectories | index($dir)) then . else .permissions.additionalDirectories += [$dir] end
+       ' "$SETTINGS_FILE" > "$tmp"; then
+    mv "$tmp" "$SETTINGS_FILE"
+    echo "  ensured allow rule:           $ALLOW_RULE"
+    echo "  ensured additionalDirectory:  $SKILLS_DIR"
+  else
+    rm -f "$tmp"
+    echo "  jq failed — settings.json unchanged (is it valid JSON?)"
+  fi
+fi
 
 # --- Summary ---
 

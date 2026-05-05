@@ -7,7 +7,7 @@ In 2025, we find ourselves at a peculiar crossroads in software development. AI 
 
 This disconnect troubled me deeply. The promise of AI-accelerated development was turning into a crisis of opacity. We were building faster but understanding less. Our codebases were becoming black boxes, even to their creators.
 
-AlignStack emerged from a simple observation: when humans and AI collaborate on code, the biggest failures occur not from bad algorithms or syntax errors, but from miscommunication and hidden assumptions. The AI assumes one thing, the developer another, and neither realizes the disconnect until production fails.
+AlignCraft emerged from a simple observation: when humans and AI collaborate on code, the biggest failures occur not from bad algorithms or syntax errors, but from miscommunication and hidden assumptions. The AI assumes one thing, the developer another, and neither realizes the disconnect until production fails.
 
 ## The Core Insight
 
@@ -15,11 +15,11 @@ Traditional development methodologies were designed for human-to-human collabora
 
 It wasnt long that it was obvious we needed relibale patterns to achieve reliable outcomes. A pattern-based discipline for reliable vibe coding was needed. 
 
-AlignStack's answer is radical transparency. Make everything visible. Make tests verbose. Make data flows explicit. Make transformations observable. When your code can't hide behind abstractions and mocks, both humans and AI must confront the actual behavior.
+AlignCraft's answer is radical transparency. Make everything visible. Make tests verbose. Make data flows explicit. Make transformations observable. When your code can't hide behind abstractions and mocks, both humans and AI must confront the actual behavior.
 
 ## A Personal Note
 
-AlignStack isn't about achieving the perfect codebase. It's about building a continuous, structured, and measurable connection between your vision and AI's understanding. AI complements your knowledge, speed, and creativity while you serve as the guiding lighthouse.
+AlignCraft isn't about achieving the perfect codebase. It's about building a continuous, structured, and measurable connection between your vision and AI's understanding. AI complements your knowledge, speed, and creativity while you serve as the guiding lighthouse.
 
 Enes/karaposu  
 10.09.2025

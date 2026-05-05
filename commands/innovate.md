@@ -1,7 +1,7 @@
-
+---
 name: innovate
 description:  A thinking discipline for producing novel ideas through systematic mechanism application.
-
+---
 
 # /innovate 
 

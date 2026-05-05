@@ -195,7 +195,7 @@ Why one location rather than three. An earlier design considered splitting enfor
 
 A note on two terms used below:
 
-- **Corpus:** in this finding, "corpus" means the collection of all `finding.md` files across an AlignStack project's `devdocs/inquiries/` folder. The audit that produced this finding examined two corpora — the vibe-driven-development project's corpus (14 findings) and the chatforge project's corpus (4 findings). Chatforge is a separate project that uses the same SIC loop and finding format.
+- **Corpus:** in this finding, "corpus" means the collection of all `finding.md` files across an AlignCraft project's `devdocs/inquiries/` folder. The audit that produced this finding examined two corpora — the vibe-driven-development project's corpus (14 findings) and the chatforge project's corpus (4 findings). Chatforge is a separate project that uses the same SIC loop and finding format.
 - **Index-readiness:** a design orientation where each Finding Summary is written so it works as a standalone entry in a hypothetical corpus-wide index (a list of all findings' summaries). This biases authors toward scannable bullets + canonical terminology, even when no actual index exists today.
 
 The craft principles:

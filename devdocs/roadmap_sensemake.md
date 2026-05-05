@@ -67,7 +67,7 @@ The core problem isn't the roadmap generation itself — it's the **context mana
 ### Strategic / Long-term
 - Roadmap folders become part of the devdocs ecosystem — they can be referenced by other commands
 - Starting state documents serve double duty: roadmap context AND project state snapshot
-- The maturity spectrum aligns with the AlignStack workflow: concept → elaboration → design → plan → implementation
+- The maturity spectrum aligns with the AlignCraft workflow: concept → elaboration → design → plan → implementation
 
 ### Risk / Failure
 - If starting state is too detailed, it becomes stale quickly
@@ -88,7 +88,7 @@ Two major shifts from SV2:
 
 1. **Starting state should be a hybrid** — references to existing docs (for the objective part) PLUS a human-written or human-validated summary (for the subjective part: "what I think the state is"). This prevents both staleness (references stay current) and loss of human context (summary captures intent).
 
-2. **The maturity spectrum should match the AlignStack workflow** but stay generic enough for non-code roadmaps. The levels should describe knowledge maturity, not implementation progress.
+2. **The maturity spectrum should match the AlignCraft workflow** but stay generic enough for non-code roadmaps. The levels should describe knowledge maturity, not implementation progress.
 
 ---
 

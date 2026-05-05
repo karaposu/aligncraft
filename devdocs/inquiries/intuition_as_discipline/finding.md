@@ -118,7 +118,7 @@ Adds:
 
 **With `/td-critique`:** embedded in validator mode; critique's prosecution and defense each pass candidate hypotheses to `/intuit` ("this candidate will succeed because prior X succeeded under similar conditions"; "this candidate will fail because prior Y failed under similar conditions"). `/intuit` returns corpus-grounded verdicts; critique uses them to strengthen adversarial testing.
 
-**Opening-book mental model:** users and readers think of AlignStack's corpus as a "book of prior positions" (like chess opening books). Each inquiry state is a position; prior inquiries are book entries with transferable methodology moves attached. `/intuit` is the lookup mechanism. This is architectural branding, not implementation — memorable and aligned with how humans actually use analogical reasoning.
+**Opening-book mental model:** users and readers think of AlignCraft's corpus as a "book of prior positions" (like chess opening books). Each inquiry state is a position; prior inquiries are book entries with transferable methodology moves attached. `/intuit` is the lookup mechanism. This is architectural branding, not implementation — memorable and aligned with how humans actually use analogical reasoning.
 
 ### 6. Resolution of the embedding question
 
@@ -264,7 +264,7 @@ From exploration, sensemaking, decomposition, innovation, and critique frontiers
 
 5. **Opening-book mental model's value** — whether users actually adopt the opening-book framing in practice, or whether the discipline's internal mechanics are complex enough that the mental model doesn't help. Measurable after first deployment.
 
-6. **Interaction with multi-head inquiries** — if AlignStack evolves to support multiple concurrent inquiries (multi-head), `/intuit` as specced operates on one source at a time. Multi-source intuition (finding structural connections across concurrent inquiries) is an interesting future direction; not scoped here.
+6. **Interaction with multi-head inquiries** — if AlignCraft evolves to support multiple concurrent inquiries (multi-head), `/intuit` as specced operates on one source at a time. Multi-source intuition (finding structural connections across concurrent inquiries) is an interesting future direction; not scoped here.
 
 7. **Calibration log scale** — `corpus_limit_seeds` is lightweight by design, but the calibration log proper (P11) may grow. When does the calibration log need structured querying? Deferred until volume forces it.
 

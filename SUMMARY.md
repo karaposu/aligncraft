@@ -54,7 +54,7 @@
 
 * [Appendix 1: New Project Prompts](content/APPENDIX1_New_Project_Prompts.md)
 * [Appendix 2: From Existing Codebase Prompts](content/APPENDIX2_From_Existing_Codebase_Prompts.md)
-* [Appendix 8: AlignStack Slash Commands](src/APPENDIX8_Alignstack_Slash_Commands.md)
+* [Appendix 8: AlignCraft Slash Commands](src/APPENDIX8_AlignCraft_Slash_Commands.md)
 * [Appendix 9: DevDocs Folder Convention](src/APPENDIX9_Devdocs_Folder_Convention.md)
 
 ## Additional Resources

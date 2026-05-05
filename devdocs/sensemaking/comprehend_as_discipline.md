@@ -4,7 +4,7 @@
 
 ## SV1 — Baseline Understanding
 
-The user is considering adding a "Comprehend" discipline to the AlignStack thinking disciplines system. The intuition is that there's a cognitive operation — understanding how something works — that isn't fully captured by the existing disciplines. The question is whether this represents a genuinely distinct cognitive operation or whether it's already covered by Sensemaking, Exploration, or some combination.
+The user is considering adding a "Comprehend" discipline to the AlignCraft thinking disciplines system. The intuition is that there's a cognitive operation — understanding how something works — that isn't fully captured by the existing disciplines. The question is whether this represents a genuinely distinct cognitive operation or whether it's already covered by Sensemaking, Exploration, or some combination.
 
 ---
 
@@ -74,7 +74,7 @@ This is structurally distinct from sensemaking's operations (anchor extraction, 
 
 When a developer says "I don't understand this code" — what do they actually need?
 - Not exploration (they can already see the files)
-- Not sensemaking in the strict AlignStack sense (the code isn't ambiguous — it has one precise behavior)
+- Not sensemaking in the strict AlignCraft sense (the code isn't ambiguous — it has one precise behavior)
 - They need to trace how data flows, why decisions were made, what invariants hold, what happens at boundaries
 
 This is the most common cognitive need when working with existing code, and it currently falls into a gap. Developers would immediately recognize "comprehend" as naming a thing they do constantly.

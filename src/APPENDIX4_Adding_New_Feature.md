@@ -1,10 +1,10 @@
-# APPENDIX 4: ADDING NEW FEATURES WITH ALIGNSTACK
+# APPENDIX 4: ADDING NEW FEATURES WITH AlignCraft
 
-This appendix provides ready-to-use prompts for systematically planning and implementing new features using the AlignStack methodology. These prompts ensure thorough planning, risk assessment, and safe implementation.
+This appendix provides ready-to-use prompts for systematically planning and implementing new features using the AlignCraft methodology. These prompts ensure thorough planning, risk assessment, and safe implementation.
 
 ## OVERVIEW
 
-Adding features in AlignStack follows a structured documentation-first approach that prevents scope creep, identifies risks early, and provides clear implementation paths for AI collaboration.
+Adding features in AlignCraft follows a structured documentation-first approach that prevents scope creep, identifies risks early, and provides clear implementation paths for AI collaboration.
 
 ## PHASE 1: FEATURE DISCOVERY & DOCUMENTATION
 

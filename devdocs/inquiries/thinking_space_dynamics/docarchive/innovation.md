@@ -49,7 +49,7 @@ What sharpens this design?
 
 ### 5. Absence Recognition (Generator)
 
-**5a (generic):** AlignStack has **no first-class active-inquiry-set object**. Attention (P4) constructs it at invocation time but nothing persists it. Make it a durable artifact that evolves across invocations and tracks activation decay over time.
+**5a (generic):** AlignCraft has **no first-class active-inquiry-set object**. Attention (P4) constructs it at invocation time but nothing persists it. Make it a durable artifact that evolves across invocations and tracks activation decay over time.
 
 **5b (focused):** **No abstraction-string store exists for existing findings.** P6 (structural analogy) assumes abstractions are pre-computed alongside embeddings — but the corpus has none. Requires a **backfill protocol**: for every existing finding, compute + store its relational abstraction. Missing from decomposition's explicit phases.
 
@@ -59,7 +59,7 @@ What sharpens this design?
 
 **6a (generic):** Transfer from **RAG systems** (information retrieval) — standard pattern, well-understood.
 
-**6b (focused):** Transfer from **chess static evaluators**. Static evaluation: at every board position, produce a real-time value estimate without lookahead, using hand-crafted (originally) or learned (now) features. AlignStack analog: at every inquiry state, produce a value estimate using features like:
+**6b (focused):** Transfer from **chess static evaluators**. Static evaluation: at every board position, produce a real-time value estimate without lookahead, using hand-crafted (originally) or learned (now) features. AlignCraft analog: at every inquiry state, produce a value estimate using features like:
 - Relationship density (how linked to prior findings)
 - Abstraction-match depth (how many structural analogies exist)
 - Discipline-telemetry health (how clean the SURVIVE/KILL ratio is)

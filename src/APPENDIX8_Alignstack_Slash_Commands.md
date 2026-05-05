@@ -1,4 +1,4 @@
-# APPENDIX 8: ALIGNSTACK SLASH COMMANDS
+# APPENDIX 8: AlignCraft SLASH COMMANDS
 
 ## What Are Slash Commands?
 
@@ -12,14 +12,14 @@ Slash commands live as `.md` files in a `commands/` directory:
 
 ## Installation
 
-Install all AlignStack slash commands globally with one line:
+Install all AlignCraft skills (slash commands) globally with one line:
 
 ```bash
 #For CLAUDE
-curl -sL https://raw.githubusercontent.com/karaposu/alignstack/main/install_claude.sh | bash
+curl -sL https://raw.githubusercontent.com/karaposu/AlignCraft/main/install_claude.sh | bash
 
 #For CODEX
-curl -sL https://raw.githubusercontent.com/karaposu/alignstack/main/install_codex.sh | bash
+curl -sL https://raw.githubusercontent.com/karaposu/AlignCraft/main/install_codex.sh | bash
 ```
 
 This downloads all slash commands and hooks into `~/.claude/` so they're available in every project you open with Claude Code.
@@ -54,7 +54,7 @@ This automatically prepends a metadata header (date, branch, commit, author) to 
 
 ## Core Commands
 
-These four commands form the primary AlignStack workflow. Each produces an artifact that the next can consume, but all work independently.
+These four commands form the primary AlignCraft workflow. Each produces an artifact that the next can consume, but all work independently.
 
 ```
 /elaborate → /task-desc → /task-plan → /critic
@@ -207,7 +207,7 @@ Run the Structural Sensemaking Framework against any input. Transforms vague or 
 
 ## Thinking Discipline Commands
 
-These commands implement the AlignStack Thinking Disciplines. Each discipline is a domain-agnostic methodology for a specific cognitive operation. They can be used independently or chained via `/inquiry`.
+These commands implement the AlignCraft Thinking Disciplines. Each discipline is a domain-agnostic methodology for a specific cognitive operation. They can be used independently or chained via `/inquiry`.
 
 ### `/innovate`
 

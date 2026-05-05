@@ -1,6 +1,6 @@
 
-# AlignStack
+# AlignCraft
 
 Markdown Book: 
 
-https://karaposu.github.io/alignstack/
+https://karaposu.github.io/AlignCraft/

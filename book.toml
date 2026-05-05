@@ -1,6 +1,6 @@
 [book]
-title = "AlignStack: Aligning Human Intent with AI Implementation"
-authors = ["AlignStack Community"]
+title = "AlignCraft: Aligning Human Intent with AI Implementation"
+authors = ["AlignCraft Community"]
 language = "en"
 src = "src"
 description = "A pattern-based methodology for aligning human intent with AI implementation in software development"
@@ -19,9 +19,9 @@ smart-punctuation = true
 mathjax-support = false
 copy-fonts = true
 no-section-label = false
-site-url = "https://karaposu.github.io/alignstack/"
-git-repository-url = "https://github.com/karaposu/alignstack"
-edit-url-template = "https://github.com/karaposu/alignstack/edit/main/src/{path}"
+site-url = "https://karaposu.github.io/AlignCraft/"
+git-repository-url = "https://github.com/karaposu/AlignCraft"
+edit-url-template = "https://github.com/karaposu/AlignCraft/edit/main/src/{path}"
 additional-css = []
 additional-js = []
 
