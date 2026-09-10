@@ -60,6 +60,8 @@ These four commands form the primary AlignCraft workflow. Each produces an artif
 /elaborate → /task-desc → /task-plan → /critic
 ```
 
+`/task-impl` runs that chain end to end — it calls `/task-desc`, `/task-plan` and `/critic-d` in sequence, folds the critic's selected fixes back into the plan, then implements and verifies.
+
 `/elaborate` and `/task-desc` serve different purposes: `/elaborate` takes messy input and makes it readable — no structure imposed, just clarity. `/task-desc` takes that clear input and shapes it into a formal feature description with problem statement, success criteria, and scope. One tidies, the other structures for implementation.
 
 ### `/elaborate`
@@ -90,12 +92,21 @@ Follows the project's existing `devdocs/` folder conventions for output location
 
 ### `/task-plan`
 
-Generate a step-by-step implementation plan (`step_by_step_plan.md`) based on a feature description. Reads all relevant code to understand existing patterns before writing.
+Generate a step-by-step implementation plan (`step_by_step_impl_plan.md`) based on a feature description. Reads all relevant code to understand existing patterns before writing. If multiple `desc.md` files exist, lists them and asks which feature to plan for.
 
-If multiple `desc.md` files exist, lists them and asks which feature to plan for.
+Blockers are identified before any steps are written, through two gates. **Gate 1 — resolvability:** if you can resolve it yourself, resolve it; it is not a blocker. Reading the code, reading the documentation, searching the web, or writing a probe and running it are all expected before anything is declared. A question is a *huge hard blocker* only when every route is exhausted and it is still out of reach — it needs a human decision, the information exists nowhere reachable, or the action is outside what the AI can do. **Gate 2 — separation:** would knowing the answer rewrite the steps, or only change when they run?
+
+That split produces the two kinds recorded in the plan's `### Huge Hard Blockers` section:
+
+- **Planning blockers** — a missing premise, not a missing detail. The answer would reorder, replace or delete steps rather than adjust them. An open one **stops the plan**: the file is written with the blocker recorded and `BLOCKED — no steps written` as its first line, and nothing further is produced. A plan written over an open planning blocker is misleading, because it looks like a decision has been made when it hasn't.
+- **Execution blockers** — something outside the plan that must happen before a step can run (a person notified, a branch deployed, an account granted). The plan is sound and complete; it just can't be finished alone. These stop nothing and bind to the step they gate.
+
+A strong assumption does not close a blocker. Convention-based reasoning is recorded as `OPEN — working assumption`, never as resolved.
+
+Each step carries **Proposed changes**, **Output**, **Safe in nature** (True/False), **Peripheral concepts**, and **Hardness Lvl** (1–5).
 
 **Input**: `desc.md` file path, `/elaborate` output, or direct description
-**Output**: `step_by_step_plan.md` in the same directory as the `desc.md`
+**Output**: `step_by_step_impl_plan.md` in the same directory as the `desc.md`
 
 [View full command](../commands/task-plan.md)
 
@@ -116,16 +127,41 @@ If multiple plans exist, lists them and asks which to critique before proceeding
 
 ### `/critic-d`
 
-Dynamic variant of `/critic`. Instead of using a generic checklist, it first generates a tailored critic prompt based on the specific plan and codebase context, saves it as `dynamic_critic_prompt.md` for inspection, then executes it after user confirmation.
+Dynamic variant of `/critic`. Instead of a generic checklist, it builds one tailored to the specific plan and codebase. Three passes, run automatically one after another:
 
-Two-phase process:
-1. Generate and save the dynamic prompt — user reviews it
-2. Execute the prompt and write `critic.md` — only after user confirms
+1. **Generate** a critic prompt for this plan and codebase, saved as `dynamic_critic_prompt.md` and printed so it can be inspected
+2. **Execute** it — produce the verdict and the risks, each with quick / robust / long-term proposals and empty selection boxes
+3. **Select** — judge the proposals, tick the boxes, write the notes
 
-**Input**: `step_by_step_plan.md` file path or direct plan description
+Before analysing anything it reads the plan's `### Huge Hard Blockers` and the sibling `desc.md`'s `## Known Blockers`. Anything declared there is known, not a discovery — a critic that "finds" what the plan already said is noise. A declared working assumption gets tested rather than restated.
+
+**Three verdicts.** `IMPLEMENT AS WRITTEN`; `IMPLEMENT AFTER FOLDING THESE IN` (the usual case); or `DO NOT IMPLEMENT — MEANING GAP`, when the plan rests on a premise that is wrong or unestablished so its steps would be rewritten rather than adjusted. The verdict is about the plan's *shape*, not the count or severity of findings — several High risks can still be verdict 2 if the premise holds, and a single finding is verdict 3 if that finding is the premise. Verdicts 1 and 2 judge the plan's content; verdict 3 judges whether it should exist. Verdict 3 triggers its own procedure: state the gap, prefix the plan file with `DEPRECATED_`, record the blocker in `desc.md`, and do not re-plan until it is closed.
+
+**Each risk is stated twice.** Paragraph one is plain — self-contained for someone who has never opened the repository, every project-specific name introduced before it is used, no file paths or symbol names. Paragraph two is precise — exact paths, symbols, call path and trigger conditions. Same risk at two resolutions; the first is an explanation of the second, not a summary of it.
+
+**Mitigations are chosen, not just listed.** Selection compares *elegance* — reach (does this close the instance, or the whole class?) divided by extent (how much has to move). A class must be enumerable to count: if you cannot name another genuine instance, there is no class and long-term collapses into robust. Each proposal carries three boxes — `selected`, `elegant`, `last_resort` — and a two-section note (*Why chosen* / *For future*). A robust fix marked `selected` + `last_resort` alongside a long-term fix marked `elegant` but unselected records the case that matters: the lesser fix was taken knowingly, and the better one is named along with what blocks it.
+
+**Input**: `step_by_step_impl_plan.md` file path or direct plan description
 **Output**: `dynamic_critic_prompt.md` + `critic.md` in the same directory as the plan
 
 [View full command](../commands/critic-d.md)
+
+---
+
+### `/task-impl`
+
+Orchestrator. Runs the whole chain on one task: `task-desc` → `task-plan` → `critic-d` → fold → implement → verify. Each step is delegated to the command that owns it; `/task-impl` sequences them, folds the critic's selected mitigations back into the plan, and decides when to halt.
+
+Two jobs are its own. **The fold** — merging the proposals the critic marked `selected` into the plan, adjusting or inserting steps, and re-checking each touched step's `Safe in nature` flag, since a mitigation that reaches into existing behaviour can make a previously safe step unsafe. **Halting** — stopping when an open huge hard blocker or a `DO NOT IMPLEMENT — MEANING GAP` verdict means the plan rests on an assumption already known to be unreliable. Halting is a successful outcome, not an error: it reports what is unresolved, where it is recorded, and what would close it.
+
+On a meaning gap it asks the single question that would close the gap, updates `desc.md`, and re-plans — capped at two cycles before handing back to a human. Resumable: re-run it on the same folder and it continues from whichever artifact is missing.
+
+Uses `/critic-d`, not `/critic` — the three-pass critic is what marks proposals `selected`, and the fold has nothing to read without it.
+
+**Input**: A folder containing `desc.md`, a path to a `desc.md`, or a raw description
+**Output**: The task folder's artifacts (`desc.md`, plan, `critic.md`), the folded plan, the implementation, and a test report
+
+[View full command](../commands/task-impl.md)
 
 ---
 
@@ -486,9 +522,10 @@ Scan all devdocs, compare each folder and file against the codebase and current 
 | `/devdocs-foundation-architecture` | Propose project architecture | `devdocs/foundations/architecture.md` |
 | `/elaborate` | Tidy up messy input | Markdown file(s) + conversation |
 | `/task-desc` | Structured feature description | `desc.md` |
-| `/task-plan` | Step-by-step implementation plan | `step_by_step_plan.md` |
+| `/task-plan` | Step-by-step plan, gated on huge hard blockers | `step_by_step_impl_plan.md` |
 | `/critic` | Risk/error/conflict analysis (generic) | `critic.md` |
-| `/critic-d` | Risk analysis (dynamic, two-phase) | `dynamic_critic_prompt.md` + `critic.md` |
+| `/critic-d` | Risk analysis (dynamic, three-pass) + verdict + mitigation selection | `dynamic_critic_prompt.md` + `critic.md` |
+| `/task-impl` | Orchestrator: desc → plan → critic-d → fold → implement → verify | Full task folder + implemented code |
 | `/sense-making` | Structural sensemaking analysis | Markdown file(s) |
 | `/innovate` | Structural innovation (7 mechanisms × 3 variations) | Markdown file(s) |
 | `/td-critique` | Structural critique (fitness landscape + adversarial verdicts) | Markdown file(s) |

@@ -23,6 +23,7 @@ REMOTE_SKILLS=(
   task-plan.md
   critic.md
   critic-d.md
+  task-impl.md
   arch-small-summary.md
   arch-intro.md
   arch-traces-2.md
