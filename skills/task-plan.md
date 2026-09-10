@@ -92,7 +92,8 @@ deploy. A person must log in.
 #### If a planning blocker is OPEN — stop
 
 Do not write the steps. Write the plan file with the top-level sections and the
-Huge Hard Blockers section filled in, put this as the document's first line:
+Huge Hard Blockers section filled in, and put this immediately after the
+frontmatter, as the document's first line of body text:
 
 > **BLOCKED — no steps written.** Open planning blocker: [one line]. This document
 > will be completed once the blocker below is closed.
@@ -120,7 +121,21 @@ Start creating step_by_step_impl_plan.md in same folder in such way:
 
 
 ## Top-Level Structure
-Start the plan with these sections before any steps:
+
+Start the file with a frontmatter block recording what produced it:
+
+```yaml
+---
+model: [model id from session context, e.g., claude-opus-4-7[1m]; "unknown" if not derivable]
+effort: [effort setting from session context, e.g., max; "unknown" if not derivable]
+---
+```
+
+Read both from session context at write time. Write `unknown` rather than omitting
+the field or guessing — an unstamped file and a file where derivation failed must
+stay distinguishable.
+
+Then these sections, before any steps:
 
 ### What is the task
 One paragraph explaining WHAT we're trying to achieve and WHY.

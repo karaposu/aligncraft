@@ -121,7 +121,18 @@ Based on context you have of the codebase, task itself and step by step plan; ge
  - Make sure generated prompt includes output instructions "Create a `critic.md` file in the same directory as the implementation plan. And this output file has high level summary on top". 
 
 
- - Make sure generated prompt requires a **document-level verdict** as the very first thing in `critic.md`, above the high level summary, chosen from exactly three:
+ - Make sure generated prompt requires a **frontmatter block** as the very first thing in `critic.md`, recording what produced the critique:
+
+   ```yaml
+   ---
+   model: [model id from session context, e.g., claude-opus-4-7[1m]; "unknown" if not derivable]
+   effort: [effort setting from session context, e.g., max; "unknown" if not derivable]
+   ---
+   ```
+
+   Read both from session context at write time. Write `unknown` rather than omitting the field or guessing. The verdict below is a judgement call, so what produced it is part of how much weight it carries.
+
+ - Make sure generated prompt requires a **document-level verdict** immediately after the frontmatter, above the high level summary, chosen from exactly three:
 
    1. **IMPLEMENT AS WRITTEN** — no changes needed.
    2. **IMPLEMENT AFTER FOLDING THESE IN** — the usual case. The plan's shape survives; the findings below get absorbed into it.
@@ -389,7 +400,20 @@ tiers are offered and none is marked.
 
 ## Output Format (for the generated critic.md)
 
-**The first thing in the document is the verdict:**
+**The document opens with a frontmatter block:**
+
+```yaml
+---
+model: [model id from session context, e.g., claude-opus-4-7[1m]; "unknown" if not derivable]
+effort: [effort setting from session context, e.g., max; "unknown" if not derivable]
+---
+```
+
+Read both from session context at write time. Write `unknown` rather than omitting
+the field or guessing — an unstamped file and a file where derivation failed must
+stay distinguishable.
+
+**Then the verdict:**
 
 | Verdict | Meaning | What follows |
 |---------|---------|--------------|
