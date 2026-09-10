@@ -17,7 +17,7 @@ $ARGUMENTS
    - What it currently does (working functionality)
    - What it appears to be trying to do (partially implemented or in-progress)
    - Who would use this and why
-   - The general shape of the project (is it a web app, a CLI tool, a library, an API, etc.)
+   - The general shape of the project (is it a web app, structured methodology notes,  a CLI tool, a library, an API, etc.)
 
 3. Keep it readable by a non-engineer. Avoid jargon. If a technical concept is essential, explain it briefly in parentheses.
 

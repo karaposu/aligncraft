@@ -26,7 +26,7 @@ curl -sL https://raw.githubusercontent.com/karaposu/AlignCraft/main/install_code
 
 This downloads all commands and hooks into `~/.claude/` so they are available in every project.
 
-To install for a single project only, copy the `commands/` folder contents into `.claude/commands/` in your project root.
+To install for a single project only, copy the `skills/` folder contents into `.claude/commands/` in your project root.
 
 ## The Core Workflow
 

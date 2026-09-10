@@ -24,7 +24,7 @@ curl -sL https://raw.githubusercontent.com/karaposu/AlignCraft/main/install_code
 
 This downloads all slash commands and hooks into `~/.claude/` so they're available in every project you open with Claude Code.
 
-To install for a single project only, copy the `commands/` folder contents into `.claude/commands/` in your project root.
+To install for a single project only, copy the `skills/` folder contents into `.claude/commands/` in your project root.
 
 ### Activating the devdocs metadata hook
 
@@ -73,7 +73,7 @@ The primary goal is clarity, not task analysis. Alignment verification is a side
 **Input**: Raw text, file path, or file path + additional text
 **Output**: Structured rephrasing saved as markdown + printed in conversation
 
-[View full command](../commands/elaborate.md)
+[View full command](../skills/elaborate.md)
 
 ---
 
@@ -86,7 +86,7 @@ Follows the project's existing `devdocs/` folder conventions for output location
 **Input**: Feature description, `/elaborate` output, or raw notes
 **Output**: `desc.md` at confirmed location
 
-[View full command](../commands/task-desc.md)
+[View full command](../skills/task-desc.md)
 
 ---
 
@@ -108,7 +108,7 @@ Each step carries **Proposed changes**, **Output**, **Safe in nature** (True/Fal
 **Input**: `desc.md` file path, `/elaborate` output, or direct description
 **Output**: `step_by_step_impl_plan.md` in the same directory as the `desc.md`
 
-[View full command](../commands/task-plan.md)
+[View full command](../skills/task-plan.md)
 
 ---
 
@@ -121,7 +121,7 @@ If multiple plans exist, lists them and asks which to critique before proceeding
 **Input**: `step_by_step_plan.md` file path or direct plan description
 **Output**: `critic.md` in the same directory as the plan
 
-[View full command](../commands/critic.md)
+[View full command](../skills/critic.md)
 
 ---
 
@@ -144,7 +144,7 @@ Before analysing anything it reads the plan's `### Huge Hard Blockers` and the s
 **Input**: `step_by_step_impl_plan.md` file path or direct plan description
 **Output**: `dynamic_critic_prompt.md` + `critic.md` in the same directory as the plan
 
-[View full command](../commands/critic-d.md)
+[View full command](../skills/critic-d.md)
 
 ---
 
@@ -161,7 +161,7 @@ Uses `/critic-d`, not `/critic` — the three-pass critic is what marks proposal
 **Input**: A folder containing `desc.md`, a path to a `desc.md`, or a raw description
 **Output**: The task folder's artifacts (`desc.md`, plan, `critic.md`), the folded plan, the implementation, and a test report
 
-[View full command](../commands/task-impl.md)
+[View full command](../skills/task-impl.md)
 
 ---
 
@@ -180,7 +180,7 @@ Establish the foundational devdocs for a project. Reads all available project co
 **Input**: None
 **Output**: `devdocs/foundations/project_description.md`, `devdocs/foundations/philosophy.md`, `devdocs/foundations/known_requirements.md`
 
-[View full command](../commands/devdocs-foundation.md)
+[View full command](../skills/devdocs-foundation.md)
 
 ---
 
@@ -191,7 +191,7 @@ Extract the essential technical concepts from the foundation documents. For each
 **Input**: None (reads foundation docs)
 **Output**: `devdocs/concepts/concepts.md` + `devdocs/concepts/concept_clarifications/01_*.md` through `NN_*.md`
 
-[View full command](../commands/devdocs-foundation-concepts.md)
+[View full command](../skills/devdocs-foundation-concepts.md)
 
 ---
 
@@ -202,7 +202,7 @@ Simplify the full concepts for prototype scope. Reduces features but preserves a
 **Input**: None (reads concepts docs)
 **Output**: `devdocs/concepts/simplified_concepts.md` + `devdocs/concepts/simplified_concept_clarifications/01_*.md` through `NN_*.md`
 
-[View full command](../commands/devdocs-foundation-simplified-concepts.md)
+[View full command](../skills/devdocs-foundation-simplified-concepts.md)
 
 ---
 
@@ -213,7 +213,7 @@ Identify logical module boundaries from the simplified concepts. Only modularize
 **Input**: None (reads simplified concepts)
 **Output**: `devdocs/foundations/module_proposal.md`
 
-[View full command](../commands/devdocs-foundation-identify-modules.md)
+[View full command](../skills/devdocs-foundation-identify-modules.md)
 
 ---
 
@@ -224,7 +224,7 @@ Propose the project architecture based on simplified concepts and module proposa
 **Input**: None (reads simplified concepts + module proposal)
 **Output**: `devdocs/foundations/architecture.md`
 
-[View full command](../commands/devdocs-foundation-architecture.md)
+[View full command](../skills/devdocs-foundation-architecture.md)
 
 ---
 
@@ -237,7 +237,7 @@ Run the Structural Sensemaking Framework against any input. Transforms vague or 
 **Input**: Raw text, file path, or file path + additional text
 **Output**: Full sensemaking analysis saved as markdown
 
-[View full command](../commands/sense-making.md)
+[View full command](../archived_commands/archive/sense-making.md)
 
 ---
 
@@ -252,7 +252,7 @@ Apply the Structural Innovation Framework to any input. Systematically generates
 **Input**: Raw text, file path, or file path + additional text
 **Output**: Full innovation analysis saved as markdown
 
-[View full command](../commands/innovate.md)
+[View full command](../archived_commands/archive/innovate.md)
 
 ---
 
@@ -263,7 +263,7 @@ Apply the Structural Critique thinking discipline. Constructs evaluation dimensi
 **Input**: Candidates to evaluate + problem context (sensemaking output or equivalent)
 **Output**: Fitness landscape with positioned candidates, coverage map, and verdicts saved as markdown
 
-[View full command](../commands/td_critique.md)
+[View full command](../archived_commands/archive/td_critique.md)
 
 ---
 
@@ -274,7 +274,7 @@ Apply the Structural Decomposition thinking discipline. Perceives the internal c
 **Input**: Complex problem, task, or system to decompose
 **Output**: Coupling map, question tree with pieces, interfaces, and dependency ordering saved as markdown
 
-[View full command](../commands/decompose.md)
+[View full command](../archived_commands/archive/decompose.md)
 
 ---
 
@@ -285,7 +285,7 @@ Apply the Structural Exploration thinking discipline. Maps unknown territory thr
 **Input**: Territory to explore (codebase path, problem space, domain)
 **Output**: Structural map with confidence levels, frontier, and gaps saved as markdown
 
-[View full command](../commands/explore.md)
+[View full command](../archived_commands/archive/explore.md)
 
 ---
 
@@ -296,7 +296,7 @@ Apply the Structural Comprehension thinking discipline. Builds internal working 
 **Input**: Artifact to comprehend (file path, folder path, raw description) + optional aspect (mechanistic/intent) and depth target
 **Output**: Comprehension versions with tested predictions, confidence map, and frontier questions saved as markdown
 
-[View full command](../commands/comprehend.md)
+[View full command](../archived_commands/comprehend.md)
 
 ---
 
@@ -309,7 +309,7 @@ Navigation replaces wayfinding (superset — 15 types vs 6 moves, full enumerati
 **Input**: Inquiry folder with SIC outputs, raw text describing current state, or file path
 **Output**: Navigation map saved as `navigation_N.md` (numbered per iteration)
 
-[View full command](../commands/navigation.md)
+[View full command](../archived_commands/navigation.md)
 
 ---
 
@@ -317,7 +317,7 @@ Navigation replaces wayfinding (superset — 15 types vs 6 moves, full enumerati
 
 Apply the Structural Wayfinding thinking discipline. Produces a single steering move from six options (BROADEN, NARROW, SHIFT, DIAGNOSE, TERMINATE, RECONSIDER). Navigation (`/navigation`) is the recommended replacement — it produces the full possibility space instead of a single direction.
 
-[View full command](../commands/wayfinding.md)
+[View full command](../archived_commands/archive/wayfinding.md)
 
 ---
 
@@ -328,7 +328,7 @@ The loop runner for chaining thinking disciplines. Not a thinking discipline its
 **Input**: New question/problem, or existing inquiry folder to resume
 **Output**: Pipeline configuration + inquiry folder, or next command to run
 
-[View full command](../commands/inquiry.md)
+[View full command](../archived_commands/archive/inquiry.md)
 
 ---
 
@@ -339,7 +339,7 @@ The minimum viable loop — runs Sensemaking → Innovation → Critique (SIC) o
 **Input**: New question/description, or existing inquiry folder to resume
 **Output**: Inquiry folder (`devdocs/inquiries/<name>/`) with `_branch.md`, `_state.md`, SIC outputs, and eventually `finding.md`
 
-[View full command](../commands/MVL.md)
+[View full command](../archived_commands/archive/MVL.md)
 
 ---
 
@@ -350,7 +350,7 @@ The extended cognitive loop — runs Exploration → Sensemaking → Decompositi
 **Input**: New question/description, or existing extended inquiry folder to resume
 **Output**: Inquiry folder with 5-step progress tracking, all discipline outputs, and `finding.md`
 
-[View full command](../commands/MVL+.md)
+[View full command](../archived_commands/archive/MVL+.md)
 
 ---
 
@@ -365,7 +365,7 @@ Read all code files and produce a non-technical summary of the project — what 
 **Input**: Optional `-n` flag (no save)
 **Output**: Saves to `devdocs/archaeology/small_summary.md` + prints in conversation
 
-[View full command](../commands/arch-small-summary.md)
+[View full command](../skills/arch-small-summary.md)
 
 ---
 
@@ -376,7 +376,7 @@ Produce a high-level architecture introduction covering data flow paths, main ab
 **Input**: Optional `-n` flag (no save)
 **Output**: Saves to `devdocs/archaeology/intro2codebase.md` + prints in conversation
 
-[View full command](../commands/arch-intro.md)
+[View full command](../skills/arch-intro.md)
 
 ---
 
@@ -387,7 +387,7 @@ Trace every internal interface and submodule-level interaction end-to-end. Creat
 **Input**: None
 **Output**: One file per trace in `devdocs/archaeology/traces/`
 
-[View full command](../commands/arch-traces.md)
+[View full command](../skills/arch-traces.md)
 
 ---
 
@@ -400,7 +400,7 @@ Writes a grouped enumeration of all traces before writing individual trace files
 **Input**: None
 **Output**: One file per trace in `devdocs/archaeology/traces/`
 
-[View full command](../commands/arch-traces-2.md)
+[View full command](../skills/arch-traces-2.md)
 
 ---
 
@@ -413,7 +413,7 @@ Requires `/arch-traces` to have been run first.
 **Input**: None
 **Output**: `devdocs/archaeology/top_improvements.md`
 
-[View full command](../commands/arch-top-improvements.md)
+[View full command](../skills/arch-top-improvements.md)
 
 ---
 
@@ -426,7 +426,7 @@ Does not delete anything — inventory only.
 **Input**: None
 **Output**: `devdocs/archaeology/dead_code_index.md`
 
-[View full command](../commands/dead-code-index.md)
+[View full command](../skills/dead-code-index.md)
 
 ---
 
@@ -439,7 +439,7 @@ Requires `/dead-code-index` to have been run first.
 **Input**: None
 **Output**: `devdocs/archaeology/dead_concepts_index.md`
 
-[View full command](../commands/dead-code-concepts.md)
+[View full command](../skills/dead-code-concepts.md)
 
 ---
 
@@ -457,7 +457,7 @@ Three-phase workflow:
 **Input**: Starting state, end state, or existing roadmap folder + node reference
 **Output**: `devdocs/roadmaps/<name>/` folder with `starting_state.md`, `end_state.md`, `map.md`
 
-[View full command](../commands/roadmap.md)
+[View full command](../skills/roadmap.md)
 
 ---
 
@@ -470,7 +470,7 @@ Generate a structured report of what happened in the project over a given time p
 **Input**: Time period — `24h`, `1d`, `7d`, `30d` (default: `7d`)
 **Output**: `devdocs/reports/overview_<period>_<date>.md`
 
-[View full command](../commands/overview-report.md)
+[View full command](../skills/overview-report.md)
 
 ---
 
@@ -483,7 +483,7 @@ Load all relevant context for a specific task and assess alignment across all si
 **Input**: Task path, task name, or description
 **Output**: Alignment report printed in conversation (not saved to file)
 
-[View full command](../commands/align.md)
+[View full command](../skills/align.md)
 
 ---
 
@@ -494,7 +494,7 @@ For a given task, assess what is needed across all seven intent modes (Explorati
 **Input**: Task path, task name, or description
 **Output**: Full multi-modal assessment printed in conversation
 
-[View full command](../commands/align-modes.md)
+[View full command](../skills/align-modes.md)
 
 ---
 
@@ -507,7 +507,7 @@ Scan all devdocs, compare each folder and file against the codebase and current 
 **Input**: Optional `-doc` flag (produce report only, don't move files)
 **Output**: Without `-doc`: archive plan + confirmation prompt + file moves. With `-doc`: `devdocs/archive_report_<date>.md`
 
-[View full command](../commands/devdocs-archivist.md)
+[View full command](../skills/devdocs-archivist.md)
 
 ---
 
