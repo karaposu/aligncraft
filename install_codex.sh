@@ -20,6 +20,7 @@ REMOTE_SKILLS=(
   devdocs-foundation-architecture.md
   elaborate.md
   task-desc.md
+  meaning-gaps.md
   task-plan.md
   critic.md
   critic-d.md
@@ -28,6 +29,7 @@ REMOTE_SKILLS=(
   arch-intro.md
   arch-traces-2.md
   arch-top-improvements.md
+  arch-devibe.md
   dead-code-index.md
   dead-code-concepts.md
   roadmap.md
