@@ -167,7 +167,21 @@ When the last step is done → **continue immediately to Verify.**
 ## Verify
 
 Run the tests relevant to what changed, then the full suite. Report what passes
-and what breaks. Do not fix failures in this run.
+and what breaks.
+
+Do not fix failures in this run, unless they are small and not architectural.
+Those, fix. Small means a local correction: a wrong name, a typo, a missing
+import, a broken reference, a call site the change forgot to update. Not
+architectural means the fix changes no design decision in the plan. If a fix
+would deserve its own step in the plan, it is not small.
+
+After fixing, re-run what failed. List every fix in the report, so nothing is
+repaired silently.
+
+Never make a failing test pass by changing what it expects, unless the plan
+itself changes that behaviour.
+
+Anything larger or architectural: report it and stop.
 
 ---
 
