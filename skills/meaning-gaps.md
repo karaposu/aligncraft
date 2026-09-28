@@ -1,5 +1,5 @@
 name: meaning-gaps
-description: Survey a description and its surrounding context for meaning gaps — unresolved questions that something downstream silently depends on, whose magnitude cannot be known until they are closed. Produces a triaged list: each gap with the route that sizes it (search internal/external, test intermediate/output, traverse, decide), what happens if it goes unsized, and a risk level. Enumerates and triages; does not resolve. Use before planning, when a description is about to become a plan, or on any work whose premises have not been checked.
+description: Survey a description and its surrounding context for meaning gaps — unresolved questions that something downstream depends on, whose magnitude cannot be known until they are closed. Produces a triaged list: each gap with the route that sizes it (search internal/external, test intermediate/output, traverse, decide), what happens if it goes unsized, and a risk level. Enumerates and triages; does not resolve. Use before planning, when a description is about to become a plan, or on any work whose premises have not been checked.
 
 # /meaning-gaps
 
@@ -63,6 +63,10 @@ A candidate is a meaning gap only if **all three** hold:
    is not a gap. Two cases that fail here specifically:
    - *The user knows and simply hasn't said* → a communication gap. Ask.
    - *It is written down somewhere obvious* → unfinished homework. Go read it.
+
+   One case that looks like it fails here but does not: a premise the plan
+   acknowledges and schedules for later is still a gap, because acknowledgement
+   schedules the test but does not close it.
 
 Everything dropped at this step goes in **Considered and not listed**, one line each
 with the reason. A survey that lists everything uncertain is worthless; the
@@ -258,8 +262,8 @@ almost nothing and reports CLEAR. *Guard:* Step 1 requires reading the context.
 
 ## Reference — what a meaning gap is
 
-> **A meaning gap is an unresolved question that something downstream silently
-> depends on, whose magnitude cannot be known until it is closed — where the answer
+> **A meaning gap is an unresolved question that something downstream depends
+> on, whose magnitude cannot be known until it is closed — where the answer
 > may change the shape of the work rather than its details, and where leaving it
 > open produces a confident-looking artifact that has quietly assumed an answer.**
 

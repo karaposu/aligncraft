@@ -36,6 +36,7 @@ If artifacts already exist, start from:
 | no `desc.md` | `task-desc` |
 | `desc.md` only | `task-plan` |
 | plan exists, no `critic.md` | `critic-d` |
+| `critic.md` says REORDER, no `Result:` line under the experiment | Experiment |
 | `critic.md` exists, plan has no `**Critic folded:**` line | Fold |
 | plan has `**Critic folded:**` | Implement |
 
@@ -87,7 +88,8 @@ Read the verdict at the top of `critic.md`.
 
 - **IMPLEMENT AS WRITTEN** → skip Fold, go to Summary
 - **IMPLEMENT AFTER FOLDING THESE IN** → Fold
-- **DO NOT IMPLEMENT — MEANING GAP** → run the cycle below
+- **REORDER — TEST BEFORE BUILD** → run the Experiment (below), then act on its result
+- **DO NOT IMPLEMENT** (MEANING GAP or WRONG LAYER) → run the cycle below
 
 `critic-d` has already renamed the plan to `DEPRECATED_*` and written the blocker
 into `desc.md`. Count the `DEPRECATED_*` plan files — that is how many cycles have
@@ -97,6 +99,29 @@ been spent.
   they answer: update `desc.md` and **immediately return to `task-plan`** — resume
   the run, do not wait for further input.
 - 2 or more, or the user does not answer → **abort**
+
+## Experiment
+
+`critic-d` wrote an experiment block under the verdict: what to run, its cost, the
+step it must precede, a disqualifying result, a passing result.
+
+1. Run it **before any plan step**. Not before step N — before step 1. It runs the
+   real component in the real composition; a stand-in that supplies the behaviour
+   does not count.
+2. Compare what happened to the two named results. The critic already defined
+   pass and fail; this is a comparison, not a judgement.
+3. Record it under the experiment block in `critic.md`:
+
+   ```
+   Result: PASS | FAIL — [what was observed], [date]
+   ```
+
+4. **PASS** → the premise held. Continue exactly as IMPLEMENT AFTER FOLDING THESE
+   IN: Fold → Summary → Implement → Verify.
+5. **FAIL** → the premise is false. This is a meaning gap with the answer already
+   in hand, so there is no question to ask. Rename the plan `DEPRECATED_*`, write
+   the result into `desc.md` under `## Known Blockers` as **CLOSED** with the
+   observation, and **abort**. It counts against the cycle cap of 2.
 
 ## Gate: before each step at Implement
 
@@ -192,7 +217,7 @@ Print this and stop:
 ```
 ⛔ ABORTED — blocker
 
-Blocker: [what is not known]
+Blocker: [what is not known — or, after a failed experiment, what was tested and found false]
 Recorded in: <folder>/critic.md, <folder>/desc.md
 Plan: DEPRECATED_[filename] — written, not implemented
 
@@ -211,7 +236,7 @@ Re-run /task-impl on this folder once it is resolved.
 1. Use `critic-d`, not `critic`.
 2. Never execute a delegated step from memory.
 3. Fold only what is marked `selected`.
-4. The meaning-gap cycle caps at 2.
+4. The meaning-gap cycle caps at 2. A plan that dies on a failed experiment counts.
 5. Do not re-critique after folding.
 6. Do not improvise past the plan.
 7. Halt on blockers. Never implement past one.

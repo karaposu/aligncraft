@@ -13,8 +13,9 @@ The three passes run automatically, one after another:
 | **Phase 2** | Run it — produce the verdict and the risks, each with three mitigation proposals and empty selection boxes | `critic.md` |
 | **Phase 3** | Judge the proposals against the selection principles — tick boxes, write notes | `critic.md` updated in place |
 
-Phase 2.5 interrupts this: if the verdict is DO NOT IMPLEMENT — MEANING GAP, the
-run ends there and Phase 3 never happens.
+Phase 2.5 interrupts this: if the verdict is DO NOT IMPLEMENT, the run ends there
+and Phase 3 never happens. Phase 2.6 handles REORDER — TEST BEFORE BUILD: the
+experiment is specified, the plan is kept, and Phase 3 still runs.
 
 ## Additional Input/Instructions
 
@@ -42,17 +43,24 @@ Before analysing anything, read:
 - The plan's `### Huge Hard Blockers` section, if it has one
 - The sibling `desc.md`'s `## Known Blockers` section, if it has one
 
-**Anything declared there is known, not a discovery.** A critic that "finds" what
-the plan already said is noise.
+**Anything declared there is known as a blocker.** Do not re-derive it as a
+finding. But known is not handled: a plan that names a premise and schedules its
+test after the work that depends on it has disclosed the risk, not closed it.
+Declared premises go into the Premise Inventory like any other.
 
 - **If the plan declares an OPEN planning blocker** — do not return it as a
   finding. Confirm it, skip the risk analysis, and go straight to Phase 2.5
-  (Verdict 3). The plan already knows it cannot stand; your job is to run the
+  (DO NOT IMPLEMENT). The plan already knows it cannot stand; your job is to run the
   procedure, not to re-derive the problem.
-- **If a planning blocker is `OPEN — working assumption`** — test the assumption
-  against the codebase and any reachable documentation. If it is wrong, that is
-  Verdict 3. If you can confirm it, say so explicitly and continue: the blocker is
-  now closed and the plan stands on firmer ground than it claimed.
+- **If a planning blocker is `OPEN — working assumption`** — first ask what kind
+  of premise it is.
+  - *Documentary* — about what code, a schema, or a spec says. Test it against the
+    codebase and reachable documentation. Wrong → DO NOT IMPLEMENT. Confirmed →
+    say so and continue; the plan stands on firmer ground than it claimed.
+  - *Behavioural* — about what a model, a model version, a device, or a vendor
+    service will do. Reading cannot confirm this. Do not mark it confirmed from
+    documentation. It is a premise for the inventory, and only running the real
+    component closes it.
 - **Declared execution blockers** — carry them into `critic.md` unchanged, as
   preconditions. They are not risks. No severity rating, no mitigation tiers.
 
@@ -132,15 +140,53 @@ Based on context you have of the codebase, task itself and step by step plan; ge
 
    Read both from session context at write time. Write `unknown` rather than omitting the field or guessing. The verdict below is a judgement call, so what produced it is part of how much weight it carries.
 
- - Make sure generated prompt requires a **document-level verdict** immediately after the frontmatter, above the high level summary, chosen from exactly three:
+ - Make sure generated prompt requires a **document-level verdict** immediately after the frontmatter, above the high level summary, chosen from exactly four:
 
    1. **IMPLEMENT AS WRITTEN** — no changes needed.
    2. **IMPLEMENT AFTER FOLDING THESE IN** — the usual case. The plan's shape survives; the findings below get absorbed into it.
-   3. **DO NOT IMPLEMENT — MEANING GAP** — the plan rests on a premise that is wrong or unestablished. Its steps would be rewritten, not adjusted. Folding fixes in produces a patched document resting on the same hole, and the patching is wasted effort because the steps change anyway.
+   3. **REORDER — TEST BEFORE BUILD** — the plan's shape may survive, but it rests on a premise it has not tested, and it builds on that premise before testing it. Nothing is added to the plan; its sequence changes. The verdict names the experiment, its cost, the step it must precede, and which result converts this to verdict 4.
+   4. **DO NOT IMPLEMENT — MEANING GAP** — the plan rests on a premise that is wrong or unestablished. Its steps would be rewritten, not adjusted. Folding fixes in produces a patched document resting on the same hole, and the patching is wasted effort because the steps change anyway. A labelled variant, **DO NOT IMPLEMENT — WRONG LAYER**, applies when the plan cites failures it does not address (see the Restart Check).
 
-   The verdict is about the plan's **shape**, not the count or severity of findings. A plan can carry several High risks and still be verdict 2 if its premise holds. A plan with a single finding is verdict 3 if that finding is a premise.
+   The verdict is about the plan's **shape and sequence**, not the count or severity of findings. A plan can carry several High risks and still be verdict 2 if its premise holds. A plan with a single finding is verdict 4 if that finding is a premise. A plan with no findings at all is verdict 3 if its first untested premise is tested after the work that depends on it.
 
-   Verdict 3 is not a stronger version of verdict 2. Verdicts 1 and 2 judge the plan's *content*; verdict 3 judges whether the plan should *exist*.
+   Verdicts 1 and 2 judge the plan's *content*. Verdict 3 judges its *order*. Verdict 4 judges whether it should *exist*.
+
+ - Make sure generated prompt requires a **falsifier line** directly under the verdict, on verdicts 1, 2 and 3:
+
+   ```
+   Falsifier: [the cheapest observation that would flip this verdict to DO NOT IMPLEMENT]
+   Affordable now: yes | no — [cost: time, money, access]
+   ```
+
+   If the falsifier is affordable now and the verdict is 1 or 2, the verdict is wrong: it is REORDER, and the falsifier is the experiment. A pass that cannot name its falsifier has not been tested. On verdict 4 the line reads "—".
+
+ - Make sure generated prompt requires a **Premise Inventory** section, placed immediately after the high level summary and before any risk item. Compute it first: it can set the verdict on its own.
+
+   **What goes in.** Two signals; either is sufficient.
+   - The plan's own hedging. Any premise the plan marks unproven — *hypothesis, experimental, to be measured at, accepted or refused at, not established, remains unqualified, assume, we expect*. The plan's honesty is the detector, not the exemption.
+   - Any claim about how a stochastic component will behave — a model, a model version, a device, a vendor service. Unproven by nature until run, whether or not the plan hedges it.
+
+   **Per premise:**
+   - **Premise** — stated plainly
+   - **First dependent step** — the first step whose cost is wasted if the premise is false
+   - **Waste if false** — steps, days, spend, from that step to wherever the premise is tested
+   - **Test scheduled at** — the step where the plan actually tests it, or "never"
+   - **Cheapest earlier test** — an observation that would settle it before the first dependent step, with its cost. "None" must be argued, not asserted.
+   - **Coverage** — what currently tests this premise. Flag as **non-covering** any test that supplies the behaviour rather than observing it: a scripted tool call, a fake provider returning the wanted output, a helper handing the system state the real component never produced. For a behavioural premise only the real component in the real composition covers it.
+
+   **Rank by waste-if-false.** Never by how clearly the plan discloses the premise. An acknowledged premise with build-before-test ordering ranks above a hidden one with nothing depending on it.
+
+   **Rule.** If any premise has a cheapest earlier test that is affordable now and is scheduled after its first dependent step, the verdict is REORDER, whatever the risk analysis finds. Rank decides which experiment goes first.
+
+   If the inventory is empty, write "No unproven premises found" and say what was checked. An empty inventory on a plan that touches a model or a vendor is itself a finding.
+
+ - Make sure generated prompt requires a **Restart Check** whenever the plan or its `desc.md` cites a prior failure, incident, or abandoned attempt as its reason for existing. One row per observed failure:
+
+   | Observed failure | Established mechanism | Design element that addresses it |
+
+   *Established* means shown, not "plausible contributor." An empty cell is a finding: "this plan does not address [failure]." If most rows have an empty cell, the verdict is **DO NOT IMPLEMENT — WRONG LAYER**: the plan rebuilds a layer the observed failures did not live in.
+
+ - Make sure generated prompt requires an **Inherited Lessons** check whenever `desc.md` carries lessons, prior conclusions, or "assumptions not inherited." One row per lesson: the lesson, and the step in the plan's ordering that satisfies it. A lesson of the form "more X does not imply Y" is satisfied only if Y is tested before the bulk of X is built. Acknowledging a lesson in prose satisfies nothing; the sequence does or does not.
 
  - Make sure generated prompt includes:
 
@@ -275,11 +321,43 @@ briefly under a "Deferred pending re-plan" heading so they are not lost.
 
 ---
 
+### Phase 2.6: If the Verdict is REORDER — TEST BEFORE BUILD
+
+The plan is not deprecated. Its premise may hold; what is wrong is the order.
+
+**1. Name the experiment in `critic.md`**, directly under the falsifier line:
+
+```
+Experiment: [what to run — the real component, in the real composition]
+Cost: [time, money, access]
+Must precede: step [N] — [the first dependent step]
+Disqualifying result: [the observation that converts this to DO NOT IMPLEMENT]
+Passing result: [the observation that lets the plan proceed as critiqued]
+```
+
+The experiment runs the real thing. A scripted stand-in, a fake provider, or a
+helper that supplies the behaviour does not close a behavioural premise and does
+not satisfy this verdict.
+
+**2. Do not rename the plan.** A REORDER plan is alive. Its steps are still the
+steps once the experiment passes.
+
+**3. Do not edit the plan.** Reordering is the orchestrator's job, or the human's.
+The critic specifies; it does not restructure.
+
+**4. Tell the user** what to run, what it costs, which step it must precede, and
+which result kills the plan.
+
+Then continue to Phase 3. The mitigations are already written; selecting among
+them is cheap, and the plan needs them if the experiment passes.
+
+---
+
 ### Phase 3: Select the Mitigation Tier
 
-Runs automatically after Phase 2, for verdict 1 and verdict 2 only. If the verdict
-was DO NOT IMPLEMENT — MEANING GAP, Phase 2.5 already ended the run and there is
-nothing to select.
+Runs automatically after Phase 2, for verdicts 1, 2 and 3 (REORDER). If the
+verdict was DO NOT IMPLEMENT, Phase 2.5 already ended the run and there is nothing
+to select.
 
 Phase 3 **only ticks boxes and writes notes.** It does not rewrite risks, add or
 remove proposals, or change severities. Phase 2 produced the options; Phase 3
@@ -419,9 +497,17 @@ stay distinguishable.
 |---------|---------|--------------|
 | **IMPLEMENT AS WRITTEN** | No changes needed | Findings, if any, are informational |
 | **IMPLEMENT AFTER FOLDING THESE IN** | The usual case — the plan's shape survives | Risk items below get absorbed into the plan |
+| **REORDER — TEST BEFORE BUILD** | The plan builds on a premise before testing it | The Phase 2.6 experiment runs first; the plan proceeds or dies on its result |
 | **DO NOT IMPLEMENT — MEANING GAP** | The plan rests on a wrong or unestablished premise | The Phase 2.5 procedure — do not fold in |
+| **DO NOT IMPLEMENT — WRONG LAYER** | The plan does not address the failures it cites | The Phase 2.5 procedure — do not fold in |
+
+Directly under the verdict, the falsifier line: the cheapest observation that
+would flip this to DO NOT IMPLEMENT, and whether it is affordable now.
 
 Then the high level summary.
+
+Then the **Premise Inventory**, before any risk item. Then the Restart Check and
+the Inherited Lessons check, when they apply.
 
 For each identified risk item, document:
 
@@ -504,4 +590,5 @@ vendor dashboard access. Revisit when access is granted.
 - Be specific. "This might cause performance issues" is useless. "Adding a full table scan in `getUsers()` on a table with 100k+ rows will degrade response time from ~50ms to ~2s" is useful.
 - Only flag real risks. Don't pad the document with low-severity noise that obscures actual problems.
 - Every Medium/High risk must have actionable mitigation — not just "be careful."
+- Disclosure is not closure. A plan that names a premise and tests it late has recorded the risk, not handled it. Rank premises by what is wasted if they are false, never by how honestly the plan states them.
 
