@@ -29,7 +29,14 @@ Then begin immediately — proceed to Delegation below. Do not wait for user inp
 
 ## Resume
 
-If artifacts already exist, start from:
+Two checks first, in this order. They decide whether the chain starts at all.
+
+1. `desc.md` carries a `**PARKED**` block → **Return** (below). Nothing else runs.
+2. Count the `pr-critic*.md` files in the folder whose Gate line says REJECTED
+   (`pr-critic_r1.md`, `pr-critic_r2.md`, `pr-critic.md` …). Three or more →
+   **Decompose** (below). Nothing else runs.
+
+Otherwise, if artifacts already exist, start from:
 
 | Folder state | Start at |
 |---|---|
@@ -210,6 +217,75 @@ Anything larger or architectural: report it and stop.
 
 ---
 
+## Decompose
+
+Three rejections of the same task mean the revisions are not converging. Each
+plan was patched around something rather than fixed, and each came back bigger.
+A fourth plan is the wrong move. The right one is to ask what the plan is
+standing on.
+
+1. **Run `meaning-gaps` on the whole history**, not only `desc.md`: every plan
+   including `DEPRECATED_*`, every `critic*.md`, every `pr-critic*.md`, every
+   `merge-check*.md`. The history is the evidence — what kept getting flagged,
+   what kept growing, what every revision touched. The question being answered
+   is: *what made this so hard?*
+
+2. **Classify each gap** with action BLOCKS or CLOSE FIRST. `meaning-gaps` lists
+   and routes; what to do about each is decided here:
+   - **An architecture decision** — someone must choose. Put it to the user.
+   - **An understanding gap** — nothing exists to read or run. Hand the traverse
+     question to `/traverse`.
+   - **Prerequisite work** — something must be built before this task can stand
+     on it. It becomes its own task.
+
+3. **Park the original.** Add this to its `desc.md`, directly after the
+   frontmatter:
+
+   > **PARKED** — [date]. Rejected 3 times; revisions were growing, not
+   > converging. Underlying: [the unsettled premise, one line].
+   > Waiting on: [spawned folders / decisions / traverse questions].
+   > When these are done, re-plan from scratch. Do not resume from the last plan.
+
+4. **Spawn each prerequisite** as its own task folder beside the original, by
+   running `task-desc` for it — do not hand-write the `desc.md`. Each says what
+   must be built, why, and which parked task it unblocks. Most vital first; the
+   gap's rank sets the order.
+
+5. **Report and stop.** Do not implement anything. Do not write a fourth plan.
+
+   ```
+   ⏸ PARKED — [task]
+   Rejected 3 times. Revisions were growing, not converging.
+   Underlying: [the unsettled premise]
+
+   Spawned, in order:
+     1. [folder] — [what it builds]
+     2. [folder] — [what it builds]
+   Decisions needed: [list, or none]
+   Traverse: [question, or none]
+
+   Start with 1. Re-run /task-impl on [task] when all are done.
+   ```
+
+Only `pr-critic` rejections count. A failed `merge-check` means the code did
+not match the plan — an implementation slip, not a sign the premise is wrong.
+
+## Return
+
+`task-impl` run on a task whose `desc.md` carries `**PARKED**`:
+
+1. Read the Waiting-on list. For each spawned folder: its plan carries
+   `**Critic folded:**` and its Verify passed. For each decision: `desc.md`
+   records the answer. For each traverse question: its output exists.
+2. Anything still open, or unclear → report what is waiting and stop. If the
+   evidence is ambiguous, ask the user whether the prerequisites are done; this
+   is a question only they can answer.
+3. All done → remove the PARKED block, rename the current plan `DEPRECATED_*`
+   — it was the one built around the hole — and start from `task-plan`.
+   **From scratch.** The prerequisites changed what the task stands on.
+
+---
+
 ## Abort
 
 Print this and stop:
@@ -240,7 +316,8 @@ Re-run /task-impl on this folder once it is resolved.
 5. Do not re-critique after folding.
 6. Do not improvise past the plan.
 7. Halt on blockers. Never implement past one.
-8. Stop for nothing but the three gates. Every other step hands straight to the
-   next one.
+8. Stop for nothing but the three gates. Decompose and Return decide whether the
+   chain starts; once it starts, every step hands straight to the next one.
 9. The user can interrupt at any time. Checkpoints and the Summary are printed for
    visibility — they are informational, not gates. Never wait on one.
+10. Three rejections means Decompose, never a fourth plan.

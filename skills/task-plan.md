@@ -24,6 +24,15 @@ If multiple descs/tasks are referred in past recent messages (check last 4,5 mes
 
 
 
+### Phase 0.5: Rejection guard
+
+Count the `pr-critic*.md` files in the task folder whose Gate line says REJECTED.
+Three or more → do not write another plan. Three rejections mean the revisions
+are not converging; a fourth plan patches around the same hole. Stop and say:
+
+> This task has been rejected three times. Run `/task-impl` on it — it will
+> decompose rather than re-plan.
+
 ### Phase 1: Identify Huge Hard Blockers
 
 Before writing any steps, determine what stands in the way. Run two gates, in order.
