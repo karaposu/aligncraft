@@ -25,6 +25,7 @@ commands=(
   task-desc.md
   meaning-gaps.md
   task-plan.md
+  task-stage-plan.md
   critic.md
   critic-d.md
   task-impl.md
@@ -38,6 +39,7 @@ commands=(
   dead-code-concepts.md
   roadmap.md
   overview-report.md
+  issue-analysis.md
   align.md
   align-modes.md
   devdocs-archivist.md
