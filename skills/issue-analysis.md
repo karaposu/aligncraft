@@ -171,19 +171,22 @@ the picture. The example below is one backlog of 30 issues seen three ways.
 
 **View 1 — by status.** Answers: what is being worked on, what stalled, what is
 quietly done. Rows are the five statuses, strongest first. This is the one view
-whose cells carry evidence in parentheses — the PR, the commit count, the release,
-the date — because the status is only as good as what proves it. A date on a 🔶 or
-🔷 cell is how the reader sees *stalled*.
+whose cells carry evidence in parentheses, because a status is only as good as
+what proves it — and the evidence is one or two tokens from a fixed set, never a
+clause: `PR #n` · `n commits` · `no commits` · `docs only` · `local only` ·
+`v1.2.3` · a date (`MM-DD`), added only when it shows the thing has stalled. The
+**not started** row lists its numbers bare, like every other row. It is the
+longest row and that is fine: a cell of numbers scans, a cell of clauses does not.
 
 ```markdown
 ### By status
 
 | Status | Count | Issues |
 |---|---|---|
-| ✅ done, not closed | 3 | #113 (PR #114 merged), #118 (PR #119 merged), #213 (shipped in v0.20.9; owner runs one command) |
-| 🔶 open PR | 5 | #9 (PR #57, since 2026-09-12), #40 (PR #71, since 2026-09-12), #72 (PR #121), #91 (PR #126), #133 (PR #194, since 2026-10-04) |
-| 🔷 code on a branch | 3 | #12 (4 commits), #160 (31 commits, last 2026-09-24), #272 (10 commits, last 2026-11-06) |
-| ⚪ branch, no code | 4 | #22, #35 (opened 2026-11-10), #203 (opened 2026-11-10, work folder locally), #223 (plan documents only) |
+| ✅ done, not closed | 3 | #113 (PR #114), #118 (PR #119), #213 (v0.20.9) |
+| 🔶 open PR | 5 | #9 (PR #57 · 09-12), #40 (PR #71 · 09-12), #72 (PR #121), #91 (PR #126), #133 (PR #194 · 10-04) |
+| 🔷 code on a branch | 3 | #12 (4 commits), #160 (31 commits · 09-24), #272 (10 commits) |
+| ⚪ branch, no code | 4 | #22 (docs only), #35 (no commits), #203 (local only), #223 (docs only) |
 | not started | 15 | #4 #15 #18 #21 #23 #27 #31 #44 #49 #64 #313 ⛔ #363 #376 #457 #480 |
 ```
 
@@ -215,15 +218,15 @@ parentheses: this view is for scanning, not for proof.
 ```
 
 **View 3 — by tier.** Answers: what to do first. Rows are the three tiers, top
-first. Marks as in view 2. The fundamentals row may say, in parentheses, what each
-one unblocks — that is the whole reason it is a fundamental, and it feeds Next up.
+first. Marks as in view 2 and nothing in parentheses: what a fundamental unblocks
+is in its record and in the chains under Next up, not here.
 
 ```markdown
 ### By tier
 
 | Tier | Count | Issues |
 |---|---|---|
-| ★ fundamental | 6 | #4 (unblocks #64), #18, #21 (unblocks #480), #44, #64, #203 ⚪ (unblocks #313, #15) |
+| ★ fundamental | 6 | #4 #18 #21 #44 #64 #203 ⚪ |
 | ◆ peripheral | 14 | #9 🔶 #12 🔷 #15 #22 ⚪ #31 #35 ⚪ #40 🔶 #91 🔶 #133 🔶 #160 🔷 #213 ✅ #272 🔷 #313 ⛔ #480 |
 | ○ good to have | 10 | #23 #27 #49 #72 🔶 #113 ✅ #118 ✅ #223 ⚪ #363 #376 #457 |
 ```
@@ -231,7 +234,10 @@ one unblocks — that is the whole reason it is a fundamental, and it feeds Next
 **Rules the views keep:**
 
 - **Same shape, three cuts.** Bucket · count · marked numbers. Nothing else in a
-  cell except view 1's evidence and view 3's "unblocks".
+  cell except view 1's evidence tokens.
+- **Numbers live in cells, or one per line.** GitHub may render a `#n` in running
+  text with its full title, so a sentence holding ten references becomes ten
+  titles. Prose on the board carries at most two references per line.
 - **Counts sum to the total** in every view. If they do not, an issue is missing
   or doubled — fix the data, not the table.
 - **The mark travels with the number** everywhere on the board, in all three
@@ -290,9 +296,16 @@ Each row waits for a yes or an answer. A decided row is removed. Most urgent fir
 
 ## ⏭ Next up
 
-1. **Now (P0/P1):** the demo-settings hole (unfiled, above) · #21 QR from anywhere · #203 staff credentials
-2. **Fundamentals, as chains:** #203 → #313 with #15 · #21 → #480 · #4 → #64
-3. **The rest** by the priority in its row.
+**Now (P0/P1)**
+1. — demo visitors can change the demo restaurant (unfiled, above)
+2. #21 — a photographed QR works from anywhere · with #480
+3. #203 — staff credentials
+
+**Fundamentals, as chains**
+- #203 → #313 with #15 — staff identity
+- #4 → #64 — account recovery
+
+Then the rest by the priority in its row.
 
 ## 🧩 Concepts
 
@@ -333,9 +346,11 @@ Each row waits for a yes or an answer. A decided row is removed. Most urgent fir
 **Rules the rest keeps:**
 
 - **Decisions on top.** They are the only thing that blocks progress. One line per
-  row: the question, not the case — the case is in the batch comment. An unfiled
-  finding is a row with `—` for its number and 📝 as the proposal; once filed it
-  gets a number and leaves this table for the views.
+  row: the question in about twenty words, not the case — the case is in the batch
+  comment. An unfiled finding is a row with `—` for its number and 📝 as the
+  proposal; once filed it gets a number and leaves this table for the views. A
+  bundle of small findings is one 📝 row ("file six deploy and doc fixes as one
+  issue"); the list stays in the batch comment.
 - **No "done" rows.** When the owner answers, closes or files, the row goes. The
   board never grows a history of what was decided.
 - **One decision, one row.** A question that covers several issues (a whole area
@@ -344,16 +359,20 @@ Each row waits for a yes or an answer. A decided row is removed. Most urgent fir
 - **The Proposed cell is a mark from the legend, never free text.** A finding
   that needs a hand rather than an issue (an untracked bundle to back up) is a ❓
   row whose question states the action. Priority rides along.
-- **Next up is three lines, not a second backlog:** what hurts now (P0/P1), then
-  fundamentals as chains (`A → B with C`), then "the rest by the priority in its
-  row". Board actions already under Needs a decision are not repeated here.
+- **Next up is a short list, not a second backlog:** at most five items under
+  Now and three chains, one per line, each `#n — a label of three to six words`,
+  `with #n` for what ships together, chains of at most four links. No sentences,
+  no parentheses. If more than five things are P0/P1, the priorities are wrong,
+  not the cap. Board actions already under Needs a decision are not repeated.
+- **Who's on what carries names, not status.** The lane is a concept or a few
+  words; the marks on the numbers already say where the work stands.
 - **The Review section says where the review stands,** in three rows. Overview:
   `done · date at commit`. One-by-one review: `not started` · `in progress · batch
   N of M · X of Y reviewed` · `done · date · Y issues in M batches`. Owner answers:
   how many rows above still wait. A refresh that brings new issues after a done
   review sets the one-by-one row back to in progress with the new count.
 - **The batch list is folded under Review** and carries each batch's range, size
-  and verdict mix, nothing else. The mix is the keep-everything check; a batch
+  and verdict mix — no notes, no issue numbers. The mix is the keep-everything check; a batch
   that is all ✔ gets rechecked.
 - **People second,** so no work is done twice. **Next up** right after the views,
   so someone looking for work reads no further.
@@ -460,8 +479,8 @@ gh issue comment <board> --body-file devdocs/issue_analysis/batch_2.md
    anything found but unfiled as a `—` row with 📝. Search all titles, open and
    closed, before calling anything unfiled.
 4. **Group by concept.** Issues sharing a concept are often duplicates or parts of
-   one piece of work — propose the merge. A concept many issues depend on is a
-   fundamental: mark it ★. Refresh the Concepts table.
+   one piece of work — propose the merge. A concept is ★ only when a named issue
+   outside it stands on it; most concepts are not. Refresh the Concepts table.
 5. Refresh **Next up** from the tiers, the order lines and the priorities.
 6. Tick the batch in the Review section with its verdict mix, set the one-by-one
    row's state (and `done · date` after the last batch), and stamp the header.
@@ -551,6 +570,8 @@ work is reported, not taken over.
 | Duplicates missed | one problem, two issues, different words | the concept column; group after each batch |
 | Priority by loudness | recent or emotional issues ranked first | the priority rule: leverage and evidence |
 | A board nobody reads | a wall of text | decisions and people first; the three views; detail folded |
+| A wall of clauses | status cells holding sentences; a ★ row full of parentheses | cells carry marks and tokens, never clauses |
+| Next up as prose | one paragraph holding twenty references, rendered as twenty titles | one item per line; five under Now, three chains |
 | Board as log | rows annotated "✅ answered", "closed on …" piling up under the decisions | a decided row leaves; the decision is written on the issue; history lives in the thread |
 | Work done twice | two people on the same issue | claim in a comment; the Who's-on-what lane |
 | A second board | a new overview issue because the old one was not found, or a title that carries the count | fixed title, label and pin; search by exact title before creating |
